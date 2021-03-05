@@ -278,16 +278,6 @@ header{
         
     }
 
-    #bitirme_img{
-        
-        margin-top: 80px;
-    }
-    
-    #rochester_img{
-        margin-top: 50px;
-        width: 350px;
-    }
-
 }
 
 
@@ -318,7 +308,7 @@ header{
 }
 
 .services{
-    margin-bottom: 4em;
+    margin-bottom: 1em;
 }
 
 .service{
@@ -343,8 +333,6 @@ header{
 }
 
 
-
-
 .service__link:hover {
     color: var(--clr-accent);  
 }
@@ -354,10 +342,16 @@ header{
     color: inherit;
 }
 
+.service__link img {
+    height: 300px;
+    width: auto;
+    margin: 0 auto;   
+}
+
 @media(min-width:800px){
     .services{
         display: flex;
-        max-width: 1500px;
+        max-width: 1400px;
         margin-left: auto;
         margin-right: auto;
         
@@ -371,16 +365,12 @@ header{
         width: 500px;
     }
 
-    #bitirme_img{
-        height: 270px;
-        width: 340px;
-        margin-top: 80px;
+    .service__link img {
+        height: 250px;
+        width: auto;
+        margin:  auto; 
+        position: relative;    
     }
-    
-    #rochester_img{
-        margin-top: 50px;
-        width: 350px;
-    }   
 }
 
 .about-me {
