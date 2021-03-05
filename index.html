@@ -1,0 +1,146 @@
+ <!DOCTYPE html>
+ <html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recai Alper Emek Portfolio</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/style.css">
+    
+    <script src="https://kit.fontawesome.com/393b001943.js" crossorigin="anonymous"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <!-- <div class="logo">
+
+            <img src="" alt="">
+
+        </div> -->
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+                <ul class="nav__list">
+                        <li class="nav__item"><a href ="#home" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href ="#services" class="nav__link">Portfolio</a></li>
+                        <li class="nav__item"><a href ="#about" class="nav__link">About me</a></li>
+                        <li class="nav__item"><a href ="#social" class="nav__link">Contact</a></li> 
+                </ul>
+        </nav>
+    </header>
+
+
+        <!-- introduction -->
+    <section class="intro" id="home">
+        <h1 class="section__title section__title--intro">
+                <strong> Alper Emek </strong>
+        </h1>
+        <p class="section__subtitle section__subtitle--intro">
+            Gis Developer
+        </p>
+        <img src="img/alper.PNG" alt="Alper Emek" class="intro__img">
+    </section>
+
+    <!-- my services  -->
+    <section class="my-services" id="services">
+        <h2 class="section__title section__title--services">Project Portfolio</h2>
+        <div class="services">
+            <div class="service">
+                <h3>Building Detection From Sar Images 
+                    Using U-Net Deep Learning Model</h3>
+                <p> Pre-processing steps were developed to create a classification mask. 
+                    Unet (CNN based) algorithm is used in the project. 
+                    Used libraries : keras, numpy, scikit-image, geopandas, sklearn, rasterio.
+                    It published on ISPRS archives.</p>
+                <a class="service__link" href="http://www.giscontest.com/en/list-39.aspx" target="_blank" >
+                        <img src="img/spacenet.gif" id="supermap_img">  Details
+                </a>
+
+            </div> <!--service-->
+            <div class="service">
+                <h3>Rochester City Real Estate Web Application</h3>
+                <p id="supermap_p">As part of the 2020 Supermap international contest, 
+                    an online real estate map web service was developed. We won first prize in the developer category 
+                    at the end of the competition with 
+                    <a class="service__link" href="https://www.linkedin.com/in/acargorkem/" target="_blank"><strong>Görkem Acar</strong></a>    .</p>
+                <a class="service__link" href="https://www.linkedin.com/posts/alper-emek-362520159_gis-supermap-webgis-activity-6727545753889185792-Lct5" target="_blank" >
+                        <img src="img/supermap.png" id="rochester_img">  Details
+                </a>
+      
+            </div> <!--service-->
+            <div class="service">
+                <h3>Image Classification Interface: Phyton And K-Means Method</h3>
+                <p>My undergraduate thesis. We develop desktop application that makes satellite image segmentation. 
+                    Presented at Uzal-CBS 2018.</p>
+                <a class="service__link" 
+                href="https://www.researchgate.net/publication/329940084_GORUNTU_SINIFLANDIRMA_ARAYUZU_PYTHON_VE_K-ORTALAMA_YONTEMI" target="_blank" >
+                        <img src="img/bitirme2.png" id="bitirme_img"> Details
+                </a>
+      
+            </div> <!--service-->
+        </div> <!--services-->
+       
+    </section>
+
+    <!-- about me  -->
+    <section class="about-me" id="about">
+        <h2 class="section__title section__title--about">Who I am</h2>
+        <p class="section__subtitle section__subtitle--about">GIS and Remote Sensing Msc. Student    </p>
+        <div class="about-me__body">
+            <p>Enthusiastic geomatic and GIS  software engineer participating 
+                in the complete product development lifecycle of successfully 
+                launched applications. I think analytically and produces solutions using the 
+                spatial knowledge acquired during my education. <strong> Making positive impact with maps!  </strong> 
+            </p>
+            <p></p>
+        </div>
+        <img src="img/alper_logo.png" alt="Alp ve melisa" class="about-me__img">
+    </section>
+    
+    <!-- my work   -->
+    <!-- <section class="my-work" id="work">
+        <h2 class="section__title section__title--work">My Work</h2>
+        <p class="section__subtitle section__subtitle--work"></p> -->
+        <!-- portfolio item  -->
+        <!-- <div class="portfolio">
+            <a href="#" class="portfolio__item">
+                <img src="img/IMG_1077.JPG" alt="" class="portfolio__img">
+            </a>
+        </div>
+    </section> -->
+    <!-- footer  -->
+   
+    <footer class="footer" id="social">
+        <a href="mailto:recaialperemek@gmail.com" class="footer__link">recaialperemek@gmail.com</a>
+        <ul class="social-list">
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://www.linkedin.com/in/alper-emek-362520159/">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://github.com/cartwheei">
+                    <i class="fab fa-github"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://twitter.com/AlperEmek">
+                    <i class="fab fa-twitter"></i>
+                </a>
+            </li>
+            <li class="social-list__item">
+                <a class="social-list__link" href="https://www.facebook.com/alper.emekk/">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+            </li>
+        </ul>
+    </footer>
+<script src="js/index.js"></script>
+
+</body>
+ </html>
