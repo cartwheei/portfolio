@@ -313,7 +313,7 @@ header{
 
 .service{
     max-width: 500px;
-    margin: 1em auto;
+    margin: auto;
     text-decoration: none;
 }
 
