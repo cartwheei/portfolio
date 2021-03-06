@@ -352,25 +352,29 @@ header{
     .services{
         display: flex;
         max-width: 1400px;
-        margin-left: auto;
-        margin-right: auto;
+        margin: auto;
         
     }
     .service + .service{
-        margin-left: 3em;
+        margin-left: 4em;
         
     }
-
     .service{
-        width: 500px;
+        display: grid;
+        grid-template-rows: 4rem 15rem auto;
+        grid-template-areas: "title" "text" "img";    
     }
 
-    .service__link img {
-        height: 250px;
-        width: auto;
-        margin:  auto; 
-        position: relative;    
+    .service__title {
+        grid-area: title;
     }
+    .service__text {
+        grid-area: text;
+    }
+    .service__image {
+        grid-area: img;
+    }
+
 }
 
 .about-me {
