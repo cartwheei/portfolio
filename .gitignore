@@ -3,3 +3,5 @@
 .playwright-mcp/
 .impeccable/review/
 .impeccable/mocks/
+.impeccable/questions/
+claude-export/
