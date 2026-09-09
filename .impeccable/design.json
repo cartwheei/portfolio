@@ -1,0 +1,803 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-09T00:00:00Z",
+  "title": "Design System: Alper Emek — Portfolio",
+  "extensions": {
+    "colorMeta": {
+      "paper": {
+        "role": "neutral",
+        "displayName": "Sheet Paper",
+        "canonical": "oklch(95.3% 0.016 86.4)",
+        "tonalRamp": [
+          "#0c0b09",
+          "#262522",
+          "#44423e",
+          "#63615b",
+          "#85827b",
+          "#a8a59d",
+          "#cdc9bf",
+          "#f3eee3"
+        ]
+      },
+      "paper-2": {
+        "role": "neutral",
+        "displayName": "Recessed Paper",
+        "canonical": "oklch(92.0% 0.021 85.9)",
+        "tonalRamp": [
+          "#0c0b08",
+          "#272520",
+          "#45423b",
+          "#656159",
+          "#868278",
+          "#aaa499",
+          "#cfc9bb",
+          "#f5eedf"
+        ]
+      },
+      "key": {
+        "role": "primary",
+        "displayName": "Keyline Ink",
+        "canonical": "oklch(21.8% 0.000 89.9)",
+        "tonalRamp": [
+          "#0b0b0b",
+          "#252525",
+          "#424242",
+          "#616161",
+          "#828282",
+          "#a5a5a5",
+          "#c9c9c9",
+          "#eeeeee"
+        ]
+      },
+      "key-soft": {
+        "role": "neutral",
+        "displayName": "Soft Ink",
+        "canonical": "oklch(33.6% 0.012 72.4)",
+        "tonalRamp": [
+          "#0e0a07",
+          "#29241f",
+          "#46413b",
+          "#65605b",
+          "#86817c",
+          "#a8a4a0",
+          "#ccc8c4",
+          "#f1eeea"
+        ]
+      },
+      "hydro": {
+        "role": "secondary",
+        "displayName": "Hydro Blue",
+        "canonical": "oklch(52.3% 0.100 244.2)",
+        "tonalRamp": [
+          "#000b24",
+          "#002747",
+          "#0b466d",
+          "#286694",
+          "#4f88b6",
+          "#78abd5",
+          "#a2cff5",
+          "#ccf4ff"
+        ]
+      },
+      "hydro-text": {
+        "role": "secondary",
+        "displayName": "Hydro Blue, text",
+        "canonical": "oklch(44.3% 0.082 242.8)",
+        "tonalRamp": [
+          "#000c22",
+          "#002843",
+          "#144668",
+          "#36668a",
+          "#5c88a9",
+          "#84aac9",
+          "#acceea",
+          "#d6f3ff"
+        ]
+      },
+      "hydro-2": {
+        "role": "secondary",
+        "displayName": "Hydro Tint",
+        "canonical": "oklch(89.8% 0.025 238.4)",
+        "tonalRamp": [
+          "#080c0e",
+          "#20262a",
+          "#3c4348",
+          "#596369",
+          "#79848c",
+          "#9aa7b1",
+          "#bcccd7",
+          "#e1f1fd"
+        ]
+      },
+      "contour": {
+        "role": "secondary",
+        "displayName": "Contour Brown",
+        "canonical": "oklch(52.6% 0.115 44.6)",
+        "tonalRamp": [
+          "#220000",
+          "#451100",
+          "#6b2d0b",
+          "#944925",
+          "#b76c4a",
+          "#d79273",
+          "#f8b89d",
+          "#ffe0c8"
+        ]
+      },
+      "contour-text": {
+        "role": "secondary",
+        "displayName": "Contour Brown, text",
+        "canonical": "oklch(43.5% 0.100 43.8)",
+        "tonalRamp": [
+          "#210000",
+          "#441200",
+          "#6a2e11",
+          "#8d4e32",
+          "#ad7258",
+          "#cd967f",
+          "#eebda8",
+          "#ffe4d2"
+        ]
+      },
+      "contour-2": {
+        "role": "secondary",
+        "displayName": "Contour Tint",
+        "canonical": "oklch(88.0% 0.034 54.1)",
+        "tonalRamp": [
+          "#0f0a07",
+          "#2b231e",
+          "#4a4039",
+          "#6c5e56",
+          "#8f7f74",
+          "#b4a194",
+          "#dbc4b6",
+          "#ffe9db"
+        ]
+      },
+      "veg": {
+        "role": "secondary",
+        "displayName": "Vegetation Green",
+        "canonical": "oklch(63.6% 0.105 137.8)",
+        "tonalRamp": [
+          "#001000",
+          "#122c07",
+          "#2b4c1f",
+          "#476d38",
+          "#639153",
+          "#87b478",
+          "#aed7a0",
+          "#d7fbca"
+        ]
+      },
+      "veg-text": {
+        "role": "secondary",
+        "displayName": "Vegetation Green, text",
+        "canonical": "oklch(48.1% 0.098 139.2)",
+        "tonalRamp": [
+          "#001100",
+          "#0c2d03",
+          "#264d1c",
+          "#436e37",
+          "#678f5c",
+          "#8cb183",
+          "#b3d4ab",
+          "#dcf8d4"
+        ]
+      },
+      "veg-2": {
+        "role": "secondary",
+        "displayName": "Vegetation Tint",
+        "canonical": "oklch(90.5% 0.030 129.8)",
+        "tonalRamp": [
+          "#0a0c08",
+          "#232620",
+          "#3f443b",
+          "#5e6458",
+          "#7e8577",
+          "#a0a898",
+          "#c3cdba",
+          "#e8f3de"
+        ]
+      },
+      "seal": {
+        "role": "tertiary",
+        "displayName": "Seal Red",
+        "canonical": "oklch(51.1% 0.174 28.7)",
+        "tonalRamp": [
+          "#2d0000",
+          "#550000",
+          "#800204",
+          "#ad2820",
+          "#d05548",
+          "#f08071",
+          "#ffaa9b",
+          "#ffd4c6"
+        ]
+      },
+      "seal-dot": {
+        "role": "tertiary",
+        "displayName": "Seal Red, point",
+        "canonical": "oklch(55.3% 0.185 28.6)",
+        "tonalRamp": [
+          "#2d0000",
+          "#560000",
+          "#810002",
+          "#af251d",
+          "#d84d40",
+          "#f87a6a",
+          "#ffa595",
+          "#ffd0c1"
+        ]
+      },
+      "plate-ground": {
+        "role": "neutral",
+        "displayName": "Press Black ground (plate view)",
+        "canonical": "oklch(18.8% 0.009 84.6)",
+        "tonalRamp": [
+          "#0d0b07",
+          "#272521",
+          "#44423e",
+          "#63615d",
+          "#84827f",
+          "#a6a5a2",
+          "#cac9c6",
+          "#efeeec"
+        ]
+      },
+      "plate-ground-2": {
+        "role": "neutral",
+        "displayName": "Recessed press ground (plate view)",
+        "canonical": "oklch(22.4% 0.010 80.6)",
+        "tonalRamp": [
+          "#0d0b07",
+          "#282520",
+          "#44423d",
+          "#64615c",
+          "#84827e",
+          "#a7a5a1",
+          "#cbc9c6",
+          "#f0eeec"
+        ]
+      },
+      "plate-key": {
+        "role": "primary",
+        "displayName": "Plate Paper keyline (plate view)",
+        "canonical": "oklch(93.0% 0.024 85.8)",
+        "tonalRamp": [
+          "#0c0b08",
+          "#272520",
+          "#45423b",
+          "#656158",
+          "#878277",
+          "#aba497",
+          "#d0c8b9",
+          "#f6eedd"
+        ]
+      },
+      "plate-key-soft": {
+        "role": "neutral",
+        "displayName": "Soft plate paper (plate view)",
+        "canonical": "oklch(82.9% 0.028 85.7)",
+        "tonalRamp": [
+          "#0d0b06",
+          "#28251e",
+          "#464138",
+          "#666155",
+          "#888274",
+          "#aca494",
+          "#d1c8b5",
+          "#f6eedc"
+        ]
+      },
+      "plate-hydro": {
+        "role": "secondary",
+        "displayName": "Hydro Blue (plate view)",
+        "canonical": "oklch(74.1% 0.075 239.8)",
+        "tonalRamp": [
+          "#000d18",
+          "#0f2838",
+          "#27465a",
+          "#41667f",
+          "#5d88a6",
+          "#7aaccf",
+          "#a1d0f2",
+          "#caf5ff"
+        ]
+      },
+      "plate-hydro-text": {
+        "role": "secondary",
+        "displayName": "Hydro text (plate view)",
+        "canonical": "oklch(83.0% 0.052 238.6)",
+        "tonalRamp": [
+          "#040c13",
+          "#192730",
+          "#334551",
+          "#4e6574",
+          "#6c8699",
+          "#8aaac0",
+          "#abcfe8",
+          "#d3f4ff"
+        ]
+      },
+      "plate-hydro-2": {
+        "role": "secondary",
+        "displayName": "Hydro tint (plate view)",
+        "canonical": "oklch(28.4% 0.035 242.9)",
+        "tonalRamp": [
+          "#010c17",
+          "#162735",
+          "#334452",
+          "#546370",
+          "#768490",
+          "#9aa7b2",
+          "#c0cbd4",
+          "#e7f0f7"
+        ]
+      },
+      "plate-contour": {
+        "role": "secondary",
+        "displayName": "Contour Brown (plate view)",
+        "canonical": "oklch(69.6% 0.106 50.2)",
+        "tonalRamp": [
+          "#1c0300",
+          "#3d1a03",
+          "#613519",
+          "#885231",
+          "#b1704b",
+          "#d99168",
+          "#fbb892",
+          "#ffdfbe"
+        ]
+      },
+      "plate-contour-text": {
+        "role": "secondary",
+        "displayName": "Contour text (plate view)",
+        "canonical": "oklch(79.1% 0.080 51.7)",
+        "tonalRamp": [
+          "#160701",
+          "#351f11",
+          "#573a29",
+          "#7c5842",
+          "#a3775d",
+          "#cb987a",
+          "#f2bc9c",
+          "#ffe2c5"
+        ]
+      },
+      "plate-contour-2": {
+        "role": "secondary",
+        "displayName": "Contour tint (plate view)",
+        "canonical": "oklch(29.6% 0.031 45.0)",
+        "tonalRamp": [
+          "#140703",
+          "#312019",
+          "#4f3d36",
+          "#6e5d56",
+          "#8e7e78",
+          "#b0a29b",
+          "#d3c6c1",
+          "#f6ece8"
+        ]
+      },
+      "plate-veg": {
+        "role": "secondary",
+        "displayName": "Vegetation Green (plate view)",
+        "canonical": "oklch(74.0% 0.094 136.9)",
+        "tonalRamp": [
+          "#030f00",
+          "#182b10",
+          "#324a27",
+          "#4d6b41",
+          "#6b8e5c",
+          "#8ab379",
+          "#afd7a0",
+          "#d7fbc9"
+        ]
+      },
+      "plate-veg-text": {
+        "role": "secondary",
+        "displayName": "Vegetation text (plate view)",
+        "canonical": "oklch(84.4% 0.065 136.0)",
+        "tonalRamp": [
+          "#070d04",
+          "#1e2919",
+          "#394733",
+          "#56674e",
+          "#758a6b",
+          "#95ae8a",
+          "#b7d3aa",
+          "#ddf8d1"
+        ]
+      },
+      "plate-veg-2": {
+        "role": "secondary",
+        "displayName": "Vegetation tint (plate view)",
+        "canonical": "oklch(27.6% 0.034 139.8)",
+        "tonalRamp": [
+          "#050e03",
+          "#1c2919",
+          "#3a4637",
+          "#596557",
+          "#7b8679",
+          "#9fa89c",
+          "#c4ccc2",
+          "#eaf1e8"
+        ]
+      },
+      "plate-seal": {
+        "role": "tertiary",
+        "displayName": "Seal Red (plate view)",
+        "canonical": "oklch(63.4% 0.174 28.4)",
+        "tonalRamp": [
+          "#280000",
+          "#4f0000",
+          "#7a1712",
+          "#a6342b",
+          "#d55044",
+          "#f9796a",
+          "#ffa394",
+          "#ffcebf"
+        ]
+      },
+      "console-ink": {
+        "role": "neutral",
+        "displayName": "Press Black, psql cell (plate view)",
+        "canonical": "oklch(12.9% 0.008 268.5)",
+        "tonalRamp": [
+          "#0a0b0e",
+          "#242528",
+          "#414245",
+          "#606164",
+          "#818285",
+          "#a4a5a7",
+          "#c8c9cb",
+          "#eeeef0"
+        ]
+      },
+      "console-keyword": {
+        "role": "neutral",
+        "displayName": "Console keyword ink",
+        "canonical": "oklch(80.3% 0.056 241.0)",
+        "tonalRamp": [
+          "#030c14",
+          "#182732",
+          "#314553",
+          "#4d6576",
+          "#6a869c",
+          "#88aac3",
+          "#aaceea",
+          "#d2f4ff"
+        ]
+      },
+      "console-string": {
+        "role": "neutral",
+        "displayName": "Console string ink",
+        "canonical": "oklch(81.6% 0.069 52.1)",
+        "tonalRamp": [
+          "#140802",
+          "#332015",
+          "#543c2d",
+          "#785a47",
+          "#9e7963",
+          "#c69a81",
+          "#eebda1",
+          "#ffe4ca"
+        ]
+      },
+      "console-function": {
+        "role": "neutral",
+        "displayName": "Console function ink",
+        "canonical": "oklch(82.9% 0.078 127.2)",
+        "tonalRamp": [
+          "#080d02",
+          "#202914",
+          "#3b472b",
+          "#596745",
+          "#788a61",
+          "#99ae7e",
+          "#bbd39c",
+          "#e2f8c6"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "The name only; printed in three registered plates (blue and brown copies under the black)."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings in the narrow left column of each plate; sticky at 112px on desktop."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Project titles."
+      },
+      "subtitle": {
+        "displayName": "Subtitle",
+        "purpose": "Stack column heads, education/publication column heads, entry titles."
+      },
+      "note": {
+        "displayName": "Note (water-name italic)",
+        "purpose": "Hero role line and contact note, always in hydro-text."
+      },
+      "meta": {
+        "displayName": "Meta italic",
+        "purpose": "Years, periods, result counts; coloured by the owning plate's text colour."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running copy; 16px in tables and entries, 16.5px in lists; 52-62ch measure."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase tracked heads of tables, boxes, and strips; tags at 0.06em. Never a kicker."
+      },
+      "control": {
+        "displayName": "Control",
+        "purpose": "Cartouche text; hero actions drop to sentence case at 15px."
+      },
+      "mono": {
+        "displayName": "Mono",
+        "purpose": "psql query at 13.5px/21px; 12px in head strips, coordinates, scale line, colophon."
+      }
+    },
+    "shadows": [],
+    "motion": [
+      {
+        "name": "ease-reg",
+        "value": "cubic-bezier(.2, .8, .2, 1)",
+        "purpose": "The one registration ease; also used for control press/hover transforms."
+      },
+      {
+        "name": "dur-reg",
+        "value": "0.7s",
+        "purpose": "Registration of a plate (section tint, print overlay, globe layers) into the keyline."
+      },
+      {
+        "name": "reg-stagger",
+        "value": "0.3s",
+        "purpose": "Delay between globe plates on load: blue 0.3s, brown 0.6s, green 0.9s, seal 1.2s (reg-b / reg-r / reg-g / reg-s, 5-7px slide)."
+      },
+      {
+        "name": "reg-name",
+        "value": "1s, blue at 0.15s, brown at 0.45s",
+        "purpose": "Hero name misregistration copies sliding from (-16px, 11px) and (14px, -10px) to their resting offsets."
+      },
+      {
+        "name": "plate-offset",
+        "value": "translate(-10px, 6px)",
+        "purpose": "Resting misregistration of a section tint before it enters view (print overlay: -8px, 6px)."
+      },
+      {
+        "name": "row-in",
+        "value": "0.35s, 0.05s stagger",
+        "purpose": "Console result rows sliding 4px from the left."
+      },
+      {
+        "name": "ring",
+        "value": "1.6s ease-out infinite",
+        "purpose": "Active globe point pulse, scale .6 to 2.3."
+      },
+      {
+        "name": "blink",
+        "value": "1s steps(1) infinite",
+        "purpose": "psql caret."
+      },
+      {
+        "name": "micro",
+        "value": "0.18s to 0.2s",
+        "purpose": "Cartouche, stamp, and row colour changes; print hover 0.5s."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "animation: none; transition: none",
+        "purpose": "Under prefers-reduced-motion every animation and transition is removed and all plates sit registered."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "seals-hide",
+        "value": "1100px"
+      },
+      {
+        "name": "stack",
+        "value": "960px"
+      },
+      {
+        "name": "sheet",
+        "value": "720px"
+      },
+      {
+        "name": "narrow",
+        "value": "420px"
+      }
+    ],
+    "rules": [
+      {
+        "name": "rule",
+        "value": "3px",
+        "purpose": "Frame and structural keyline."
+      },
+      {
+        "name": "hair",
+        "value": "1.5px",
+        "purpose": "Inner keyline: cartouche and tag borders, row dividers, underline thickness."
+      },
+      {
+        "name": "regmark",
+        "value": "20px circle, 1.5px border, 1px crosshair, 1.6px dot",
+        "purpose": "Registration marks centred on the four sheet corners (16px under 720px)."
+      },
+      {
+        "name": "kento",
+        "value": "clip-path: polygon(0 7px, 7px 7px, 7px 0, 100% 0, 100% 100%, 0 100%)",
+        "purpose": "Registration notch on every cartouche; two 1.5px hairlines close it on an unprinted cartouche."
+      },
+      {
+        "name": "hatch-hydro",
+        "value": "repeating-linear-gradient(45deg, transparent 0 7px, color-mix(in srgb, var(--hydro) 22%, transparent) 7px 8px)",
+        "purpose": "Hydro plate texture; globe sea uses a 7px SVG hatch pattern in hydro at .55."
+      },
+      {
+        "name": "hatch-contour",
+        "value": "repeating-linear-gradient(0deg, transparent 0 13px, color-mix(in srgb, var(--contour) 22%, transparent) 13px 14px)",
+        "purpose": "Contour plate texture."
+      },
+      {
+        "name": "print-blend",
+        "value": "multiply .55 (paper) / screen .35 (plate view); hover .28",
+        "purpose": "Plate colour over a grayscale image."
+      },
+      {
+        "name": "focus",
+        "value": "outline: 2px solid var(--seal); outline-offset: 3px (cartouche: -4px)",
+        "purpose": "Focus ring in seal red."
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Cartouche",
+      "kind": "button",
+      "refersTo": "cartouche",
+      "description": "Boxed label with a kento registration notch; the only control shape. Hover recesses to paper-2, press nudges 1px.",
+      "html": "<a class=\"ds-cartouche\" href=\"#\">Projeler</a>",
+      "css": ".ds-cartouche { position: relative; display: inline-flex; align-items: center; justify-content: center; min-height: 38px; padding: 9px 14px; border: 1.5px solid var(--key, #1a1a1a); background: transparent; color: var(--key, #1a1a1a); font: 600 13px/1 'Source Sans 3', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; white-space: nowrap; cursor: pointer; clip-path: polygon(0 7px, 7px 7px, 7px 0, 100% 0, 100% 100%, 0 100%); transition: background .2s, color .2s, border-color .2s, transform .18s cubic-bezier(.2,.8,.2,1); } .ds-cartouche::before, .ds-cartouche::after { content: ''; position: absolute; background: var(--key, #1a1a1a); } .ds-cartouche::before { left: 7px; top: 0; width: 1.5px; height: 8.5px; } .ds-cartouche::after { left: 0; top: 7px; width: 8.5px; height: 1.5px; } .ds-cartouche:hover { background: var(--paper-2, #ebe4d5); } .ds-cartouche:active { transform: translate(1px, 1px); } .ds-cartouche:focus-visible { outline: 2px solid var(--seal, #b52d24); outline-offset: -4px; } "
+    },
+    {
+      "name": "Cartouche, printed",
+      "kind": "button",
+      "refersTo": "cartouche-printed",
+      "description": "Pressed toggle or current nav item: fills solid in the keyline (toggles) or the section plate (nav via --plate); notch hairlines drop.",
+      "html": "<span style=\"display:inline-flex\"><button class=\"ds-cartouche ds-cartouche--on\" aria-pressed=\"true\">TR</button><button class=\"ds-cartouche\" style=\"margin-left:-1.5px\" aria-pressed=\"false\">EN</button></span> <a class=\"ds-cartouche ds-cartouche--on\" style=\"--plate: var(--veg, #6b9a5a); color: var(--key, #1a1a1a); margin-left: 12px\" aria-current=\"true\" href=\"#\">Projeler</a>",
+      "css": ".ds-cartouche { position: relative; display: inline-flex; align-items: center; justify-content: center; min-height: 38px; padding: 9px 14px; border: 1.5px solid var(--key, #1a1a1a); background: transparent; color: var(--key, #1a1a1a); font: 600 13px/1 'Source Sans 3', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; white-space: nowrap; cursor: pointer; clip-path: polygon(0 7px, 7px 7px, 7px 0, 100% 0, 100% 100%, 0 100%); transition: background .2s, color .2s, border-color .2s, transform .18s cubic-bezier(.2,.8,.2,1); } .ds-cartouche::before, .ds-cartouche::after { content: ''; position: absolute; background: var(--key, #1a1a1a); } .ds-cartouche::before { left: 7px; top: 0; width: 1.5px; height: 8.5px; } .ds-cartouche::after { left: 0; top: 7px; width: 8.5px; height: 1.5px; } .ds-cartouche:hover { background: var(--paper-2, #ebe4d5); } .ds-cartouche:active { transform: translate(1px, 1px); } .ds-cartouche:focus-visible { outline: 2px solid var(--seal, #b52d24); outline-offset: -4px; } .ds-cartouche--on { background: var(--plate, var(--key, #1a1a1a)); border-color: var(--plate, var(--key, #1a1a1a)); color: var(--on-plate, #f4efe4); } .ds-cartouche--on:hover { background: var(--plate, var(--key, #1a1a1a)); } .ds-cartouche--on::before, .ds-cartouche--on::after { display: none; }"
+    },
+    {
+      "name": "Cartouche, primary (fill-contour)",
+      "kind": "button",
+      "refersTo": "cartouche-primary",
+      "description": "The single call-to-action: printed solid in contour brown, paper text, 44px tall; hover darkens to contour-text.",
+      "html": "<a class=\"ds-cartouche ds-cartouche--primary\" href=\"#\">Projelere git</a>",
+      "css": ".ds-cartouche { position: relative; display: inline-flex; align-items: center; justify-content: center; min-height: 38px; padding: 9px 14px; border: 1.5px solid var(--key, #1a1a1a); background: transparent; color: var(--key, #1a1a1a); font: 600 13px/1 'Source Sans 3', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; white-space: nowrap; cursor: pointer; clip-path: polygon(0 7px, 7px 7px, 7px 0, 100% 0, 100% 100%, 0 100%); transition: background .2s, color .2s, border-color .2s, transform .18s cubic-bezier(.2,.8,.2,1); } .ds-cartouche::before, .ds-cartouche::after { content: ''; position: absolute; background: var(--key, #1a1a1a); } .ds-cartouche::before { left: 7px; top: 0; width: 1.5px; height: 8.5px; } .ds-cartouche::after { left: 0; top: 7px; width: 8.5px; height: 1.5px; } .ds-cartouche:hover { background: var(--paper-2, #ebe4d5); } .ds-cartouche:active { transform: translate(1px, 1px); } .ds-cartouche:focus-visible { outline: 2px solid var(--seal, #b52d24); outline-offset: -4px; } .ds-cartouche--primary { min-height: 44px; padding: 12px 18px; background: var(--contour, #a0522d); border-color: var(--contour, #a0522d); color: #fff; } .ds-cartouche--primary::before, .ds-cartouche--primary::after { display: none; } .ds-cartouche--primary:hover { background: var(--contour-text, #7d3c1e); border-color: var(--contour-text, #7d3c1e); }"
+    },
+    {
+      "name": "Stamp",
+      "kind": "button",
+      "refersTo": "stamp",
+      "description": "Publisher's red seal for contact links: 2px seal border, 3px radius, rotated; hover fills solid and squares the rotation.",
+      "html": "<a class=\"ds-stamp\" href=\"#\">e-posta</a> <a class=\"ds-stamp ds-stamp--round\" href=\"#\" aria-label=\"LinkedIn\">in</a> <a class=\"ds-stamp ds-stamp--alt\" href=\"#\">GitHub</a>",
+      "css": ".ds-stamp { display: inline-flex; align-items: center; justify-content: center; min-height: 38px; padding: 8px 12px; margin: 6px; border: 2px solid var(--seal, #b52d24); border-radius: 3px; color: var(--seal, #b52d24); background: transparent; font: 700 13px/1 Bitter, Georgia, serif; letter-spacing: .02em; text-decoration: none; transform: rotate(-2deg); transition: background .18s, color .18s, transform .18s cubic-bezier(.2,.8,.2,1); } .ds-stamp--alt { transform: rotate(1.6deg); } .ds-stamp--round { width: 40px; height: 40px; padding: 0; border-radius: 50%; } .ds-stamp:hover, .ds-stamp:focus-visible { background: var(--seal, #b52d24); color: var(--paper, #f4efe4); transform: rotate(0) scale(.98); outline: none; }"
+    },
+    {
+      "name": "Tag",
+      "kind": "chip",
+      "refersTo": "tag",
+      "description": "Technology tag: uppercase label in a 1.5px keyline box, no states.",
+      "html": "<span class=\"ds-tag\">PostGIS</span> <span class=\"ds-tag\">Leaflet</span> <span class=\"ds-tag\">U-Net</span>",
+      "css": ".ds-tag { display: inline-block; padding: 4px 9px 3px; margin-right: 8px; border: 1.5px solid var(--key, #1a1a1a); color: var(--key, #1a1a1a); font: 600 12px/1.3 'Source Sans 3', 'Segoe UI', Roboto, sans-serif; letter-spacing: .06em; text-transform: uppercase; }"
+    },
+    {
+      "name": "Sheet head",
+      "kind": "nav",
+      "refersTo": "keyline-box",
+      "description": "Sticky head strip: title cartouche, section nav, switches, seals, divided by 3px keyline rules on paper.",
+      "html": "<header class=\"ds-head\"><a class=\"ds-head-title\" href=\"#\"><span class=\"ds-head-name\">Alper Emek</span><span class=\"ds-head-role\">GIS yazılım geliştirici</span></a><nav class=\"ds-head-nav\"><a class=\"ds-cartouche\" href=\"#\">Projeler</a><a class=\"ds-cartouche\" href=\"#\">Yetenekler</a><a class=\"ds-cartouche\" href=\"#\">Deneyim</a></nav><div class=\"ds-head-seals\"><a class=\"ds-stamp\" href=\"#\">e-posta</a></div></header>",
+      "css": ".ds-head { display: grid; grid-template-columns: auto minmax(0,1fr) auto; align-items: stretch; background: var(--paper, #f4efe4); color: var(--key, #1a1a1a); border: 3px solid var(--key, #1a1a1a); } .ds-head > * { display: flex; align-items: center; gap: 10px; padding: 12px 22px; } .ds-head > * + * { border-left: 3px solid var(--key, #1a1a1a); } .ds-head-title { flex-direction: column; align-items: flex-start; gap: 3px; text-decoration: none; color: inherit; } .ds-head-name { font: 800 21px/1 Bitter, Georgia, serif; letter-spacing: .01em; } .ds-head-role { font: italic 400 15px/1.2 Bitter, Georgia, serif; color: var(--hydro-text, #24587d); } .ds-cartouche { position: relative; display: inline-flex; align-items: center; justify-content: center; min-height: 38px; padding: 9px 14px; border: 1.5px solid var(--key, #1a1a1a); background: transparent; color: var(--key, #1a1a1a); font: 600 13px/1 'Source Sans 3', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; letter-spacing: .1em; text-transform: uppercase; text-decoration: none; white-space: nowrap; cursor: pointer; clip-path: polygon(0 7px, 7px 7px, 7px 0, 100% 0, 100% 100%, 0 100%); transition: background .2s, color .2s, border-color .2s, transform .18s cubic-bezier(.2,.8,.2,1); } .ds-cartouche::before, .ds-cartouche::after { content: ''; position: absolute; background: var(--key, #1a1a1a); } .ds-cartouche::before { left: 7px; top: 0; width: 1.5px; height: 8.5px; } .ds-cartouche::after { left: 0; top: 7px; width: 8.5px; height: 1.5px; } .ds-cartouche:hover { background: var(--paper-2, #ebe4d5); } .ds-cartouche:active { transform: translate(1px, 1px); } .ds-cartouche:focus-visible { outline: 2px solid var(--seal, #b52d24); outline-offset: -4px; } .ds-stamp { display: inline-flex; align-items: center; min-height: 38px; padding: 8px 12px; border: 2px solid var(--seal, #b52d24); border-radius: 3px; color: var(--seal, #b52d24); font: 700 13px/1 Bitter, Georgia, serif; text-decoration: none; transform: rotate(-2deg); transition: background .18s, color .18s, transform .18s; } .ds-stamp:hover { background: var(--seal, #b52d24); color: var(--paper, #f4efe4); transform: none; }"
+    },
+    {
+      "name": "Console (psql + result)",
+      "kind": "card",
+      "refersTo": "console-sql",
+      "description": "Two cells under a 3px rule: black psql cell with mono query and syntax inks; paper-2 result cell with hairline rows whose hover turns the name seal red.",
+      "html": "<div class=\"ds-console\"><div class=\"ds-sql\"><div class=\"ds-sql-head\"><span>psql · gis=#</span><span>2 satır</span></div><pre class=\"ds-query\"><span class=\"k\">SELECT</span> title, year\n<span class=\"k\">FROM</span>   work w\n<span class=\"k\">WHERE</span>  <span class=\"f\">ST_Contains</span>(p.geom, w.geom)\n<span class=\"k\">AND</span>    p.name = <span class=\"s\">'Rotterdam'</span>;<span class=\"ds-caret\"></span></pre></div><div class=\"ds-res\"><p class=\"ds-res-title\">Sonuç · Rotterdam</p><ul class=\"ds-rows\"><li><a class=\"ds-row\" href=\"#\"><span class=\"a\">SpaceNet 6 SAR</span><span class=\"b\">U-Net bina tespiti</span><span class=\"c\">2020</span></a></li><li><a class=\"ds-row\" href=\"#\"><span class=\"a\">ISPRS Archives</span><span class=\"b\">XLIV-4/W3-2020</span><span class=\"c\">2020</span></a></li></ul></div></div>",
+      "css": ".ds-console { display: grid; grid-template-columns: minmax(0,1fr) minmax(0,1fr); border: 3px solid var(--key, #1a1a1a); min-height: 210px; font-family: 'Source Sans 3', 'Segoe UI', Roboto, sans-serif; } .ds-sql { background: var(--key, #1a1a1a); color: var(--paper, #f4efe4); padding: 12px 18px 10px; } .ds-sql-head { display: flex; justify-content: space-between; font: 400 12px/1.2 'JetBrains Mono', Menlo, monospace; letter-spacing: .02em; opacity: .85; margin-bottom: 10px; } .ds-query { margin: 0; font: 400 13.5px/21px 'JetBrains Mono', Menlo, monospace; white-space: pre-wrap; } .ds-query .k { color: #9fc4e0; } .ds-query .s { color: #e8b79a; } .ds-query .f { color: #b9d19a; } .ds-caret { display: inline-block; width: 8px; height: 15px; margin-left: 2px; vertical-align: -2px; background: #9fc4e0; animation: ds-blink 1s steps(1) infinite; } @keyframes ds-blink { 50% { opacity: 0; } } .ds-res { background: var(--paper-2, #ebe4d5); color: var(--key, #1a1a1a); padding: 12px 18px 10px; border-left: 3px solid var(--key, #1a1a1a); } .ds-res-title { margin: 0 0 8px; font: 600 12px/1.2 inherit; letter-spacing: .1em; text-transform: uppercase; color: var(--key-soft, #3b3630); } .ds-rows { list-style: none; margin: 0; padding: 0; } .ds-rows li + li .ds-row { border-top: 1.5px solid var(--key, #1a1a1a); } .ds-row { display: grid; grid-template-columns: minmax(0,1fr) auto; gap: 4px 12px; align-items: baseline; padding: 6px 0; color: inherit; text-decoration: none; font-size: 14.5px; line-height: 20px; } .ds-row .a { grid-column: 1; grid-row: 1; font-weight: 600; } .ds-row .b { grid-column: 1; grid-row: 2; color: var(--key-soft, #3b3630); font-size: 13.5px; } .ds-row .c { grid-column: 2; grid-row: 1 / span 2; align-self: center; font: italic 500 15px Bitter, Georgia, serif; color: var(--hydro-text, #24587d); } .ds-row:hover .a, .ds-row:focus-visible .a { color: var(--seal, #b52d24); }"
+    },
+    {
+      "name": "Print (project image)",
+      "kind": "card",
+      "refersTo": "keyline-box",
+      "description": "A 3px keyline figure: grayscale image under a multiply field of the section plate, offset until registered; hover lifts the print and lets colour through.",
+      "html": "<figure class=\"ds-print ds-print--in\" style=\"--plate: var(--veg, #6b9a5a)\"><div class=\"ds-print-frame\"><img src=\"data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200'%3E%3Crect width='300' height='200' fill='%23999'/%3E%3Ccircle cx='150' cy='100' r='60' fill='%23555'/%3E%3C/svg%3E\" alt=\"\"></div></figure>",
+      "css": ".ds-print { margin: 0; max-width: 360px; border: 3px solid var(--key, #1a1a1a); background: var(--paper-2, #ebe4d5); transition: transform .5s cubic-bezier(.2,.8,.2,1); } .ds-print-frame { position: relative; aspect-ratio: 3 / 2; overflow: hidden; } .ds-print-frame img { display: block; width: 100%; height: 100%; object-fit: cover; filter: grayscale(1) contrast(1.1); transition: filter .5s, transform .6s cubic-bezier(.2,.8,.2,1); } .ds-print-frame::after { content: ''; position: absolute; inset: 0; background: var(--plate, #6b9a5a); mix-blend-mode: multiply; opacity: .55; transform: translate(-8px, 6px); transition: opacity .5s, transform .7s cubic-bezier(.2,.8,.2,1); } .ds-print--in .ds-print-frame::after { transform: none; } .ds-print:hover { transform: translate(-3px, -3px); } .ds-print:hover .ds-print-frame::after { opacity: .28; } .ds-print:hover .ds-print-frame img { filter: grayscale(.4) contrast(1.05); transform: scale(1.02); }"
+    },
+    {
+      "name": "Plate (section field)",
+      "kind": "custom",
+      "refersTo": "keyline-box",
+      "description": "A section owning one plate: 3px rule on top, headline left in Bitter 700, body right, tint ground with a plate-colour hatch that registers in on scroll.",
+      "html": "<section class=\"ds-plate ds-plate--in\"><h2 class=\"ds-plate-h\">Yetenekler</h2><div class=\"ds-plate-body\"><p class=\"ds-plate-meta\">PostGIS · Leaflet · FastAPI</p><p>Body copy sits in Source Sans 3 at 17px over the hydro tint, with the 45° hatch in 22% hydro behind it.</p></div></section>",
+      "css": ".ds-plate { position: relative; isolation: isolate; display: grid; grid-template-columns: minmax(120px, 3fr) minmax(0, 9fr); gap: 24px 48px; padding: 48px 32px 56px; border-top: 3px solid var(--key, #1a1a1a); color: var(--key, #1a1a1a); font: 400 17px/1.55 'Source Sans 3', 'Segoe UI', Roboto, sans-serif; } .ds-plate::before { content: ''; position: absolute; inset: 0; z-index: -1; background-color: var(--hydro-2, #cfe0ec); background-image: repeating-linear-gradient(45deg, transparent 0 7px, color-mix(in srgb, var(--hydro, #2f6f9f) 22%, transparent) 7px 8px); transform: translate(-10px, 6px); opacity: 0; transition: transform .7s cubic-bezier(.2,.8,.2,1), opacity .7s cubic-bezier(.2,.8,.2,1); } .ds-plate--in::before { transform: none; opacity: 1; } .ds-plate-h { margin: 0; padding-top: 6px; font: 700 clamp(36px, 4.2vw, 52px)/1.02 Bitter, Georgia, serif; letter-spacing: -.012em; } .ds-plate-body p { margin: 0; } .ds-plate-meta { font: italic 400 17px/1.4 Bitter, Georgia, serif; color: var(--hydro-text, #24587d); margin-bottom: 12px !important; }"
+    },
+    {
+      "name": "Experience table",
+      "kind": "custom",
+      "refersTo": "keyline-box",
+      "description": "Hairline keyline table: uppercase label heads over a 3px rule, italic contour-text periods, row hover tints contour-2.",
+      "html": "<table class=\"ds-exp\"><thead><tr><th>Dönem</th><th>Kurum</th><th>Rol</th><th>Yer</th></tr></thead><tbody><tr><td class=\"period\">06/2022 –</td><td class=\"org\">Netcad Yazılım A.Ş.</td><td>GIS yazılım geliştirici</td><td class=\"place\">İstanbul</td></tr><tr><td class=\"period\">02–06/2021</td><td class=\"org\">Geotech Maps Ltd.</td><td>GIS geliştirici</td><td class=\"place\">Ankara</td></tr></tbody></table>",
+      "css": ".ds-exp { width: 100%; border-collapse: collapse; background: var(--paper, #f4efe4); color: var(--key, #1a1a1a); border: 1.5px solid var(--key, #1a1a1a); font: 400 16px/1.5 'Source Sans 3', 'Segoe UI', Roboto, sans-serif; } .ds-exp th { text-align: left; font: 600 12px/1.3 inherit; letter-spacing: .1em; text-transform: uppercase; padding: 14px 16px; border-bottom: 3px solid var(--key, #1a1a1a); color: var(--key-soft, #3b3630); } .ds-exp td { padding: 16px; vertical-align: top; border-bottom: 1.5px solid var(--key, #1a1a1a); } .ds-exp tbody tr:last-child td { border-bottom: 0; } .ds-exp .period { font: italic 500 16px/1.5 Bitter, Georgia, serif; color: var(--contour-text, #7d3c1e); white-space: nowrap; } .ds-exp .org { font-weight: 600; } .ds-exp .place { color: var(--key-soft, #3b3630); } .ds-exp tbody tr { transition: background .2s; } .ds-exp tbody tr:hover { background: var(--contour-2, #ead2c3); }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Registered Plate Print",
+    "overview": "**Creative North Star: \"The Registered Plate Print\"**\n\nThe site is one topographic map sheet printed in colour separation. A single black keyline plate draws every boundary: the sheet frame, the sticky head strip, every table rule, every box, the coastline of the globe. Four flat plate colours (hydrography blue, contour brown, vegetation green, publisher's seal red) are pressed into that keyline one at a time, each owning one field of the page. Nothing is a gradient, nothing floats, nothing is rounded except a rubber stamp. Depth exists only as registration: a colour plate sits a few pixels off the black until it slides into place.\n\nDensity is that of a printed sheet, not a dashboard. Text is set in a map-title serif (Bitter) with a sans (Source Sans 3) for running copy and tables, and a monospace (JetBrains Mono) reserved for the psql console and coordinates. Labels are small, tracked, uppercase table headings in the keyline ink; notes that read like water names are set in Bitter italic in the hydro blue. The dark theme is not a \"dark mode\" but the plate view: the ground turns to press black, the keyline prints as paper, plate hues brighten one step, tints darken, and the world otherwise holds.\n\nThe world was translated from Edo woodblock block registration (kento notches, one block per colour, red publisher seal) to topographic colour separation. It rejects the category defaults: no dark hero with a glowing network globe, no grid of same-size cards, no single-accent white modernist grid, no shadows.",
+    "keyCharacteristics": [
+      "One keyline ink draws every edge; two rule weights only, 3px frame and 1.5px inner.",
+      "Four flat plate colours, each sealed to one section; a section never mixes plates.",
+      "Paper ground, square cuts, zero radius everywhere except red stamps.",
+      "Registration is the only motion: plates translate 4-16px into place with one ease and one duration.",
+      "Controls are cartouches with a kento notch; active state prints the plate colour solid.",
+      "Photographs print grayscale under a multiply field of the section's plate colour."
+    ],
+    "rules": [
+      {
+        "name": "The Keyline Rule",
+        "body": "Every edge on the sheet is drawn in `key` at 3px (frame, head strip, section tops, box borders, table heads) or 1.5px (inner rules, cartouche and tag borders, row dividers). Plate colours never draw a border except as the border of their own solid fill.",
+        "section": "colors"
+      },
+      {
+        "name": "The One Plate Rule",
+        "body": "A section carries a single plate: its tint as ground, its plate text for italic meta, its plate for bullets, markers, and the image overlay. Two plate colours never meet inside one section field; only the globe and the hero name register several plates, and there the black keyline sits on top.",
+        "section": "colors"
+      },
+      {
+        "name": "The Seal Reserve Rule",
+        "body": "Red is the publisher's seal, not an accent: links-as-stamps, globe points, the active place, the focus ring. It never fills a field, never tints a section, never draws a rule.",
+        "section": "colors"
+      },
+      {
+        "name": "The Water-Name Rule",
+        "body": "Any secondary line of annotation (role, note, meta, years, counts) is Bitter italic in the owning plate's text colour. It is never uppercase, never tracked, never grey.",
+        "section": "typography"
+      },
+      {
+        "name": "The Console-Only Mono Rule",
+        "body": "JetBrains Mono appears only in the psql cell, the globe head strip, coordinates, the scale line, and the colophon. It never sets body copy, headings, or controls.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat Impression Rule",
+        "body": "No `box-shadow`, no blur, no glow, no gradient fills. If something must read as \"above\", it is a solid plate translated off the keyline, or a 3px keyline box. The single permitted blend is `multiply` (paper) / `screen` (plate view) for a colour plate over a grayscale image.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "**Do** draw every edge in the keyline ink at 3px or 1.5px; add a rule before adding space.",
+      "**Do** give a new section exactly one plate (tint ground, plate text for italics, plate for markers) and register it in on scroll with the 0.7s ease.",
+      "**Do** make every control a cartouche with the kento notch; an active state prints solid in its plate colour.",
+      "**Do** set annotation lines (roles, meta, years, counts) in Bitter italic in the owning plate's text colour.",
+      "**Do** print images grayscale under a multiply field of the section plate inside a 3px keyline frame.",
+      "**Do** keep red for stamps, globe points, the active place, and focus; a red stamp is always rotated and always a link.",
+      "**Do** mirror every colour into the plate view: ground to `plate-ground`, keyline to `plate-key`, plate hues one step lighter, tints dark."
+    ],
+    "donts": [
+      "**Don't** use box-shadow, blur, glow, or gradient fills; depth is a translated flat plate.",
+      "**Don't** round corners except the 3px stamp and 50% seals, marks, and points.",
+      "**Don't** mix two plate colours inside one section field or draw a border in a plate colour.",
+      "**Don't** set body, headings, or controls in JetBrains Mono; it belongs to the console and coordinates only.",
+      "**Don't** use uppercase tracked labels as kickers above titles; Label type heads a table, box, or strip.",
+      "**Don't** introduce cards with equal boxes; sections are hairline-divided rows, columns, and tables on the plate.",
+      "**Don't** add a second ease or duration for registration; everything registers with `cubic-bezier(.2, .8, .2, 1)` over 0.7s."
+    ]
+  }
+}
