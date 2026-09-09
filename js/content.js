@@ -104,7 +104,7 @@ window.CONTENT = {
         bullets: [
           'SuperMap 2020 uluslararası yarışması için geliştirildi',
           'Emlak verisi üzerinde mekânsal analiz, adres eşleme ve harita servisi',
-          'Geliştirici kategorisinde birincilik'
+          'Uluslararası yarışmada geliştirici kategorisinde birincilik kazanıldı'
         ],
         tags: ['SuperMap iClient', 'Leaflet', 'WebGIS', 'Mekânsal SQL'],
         links: [{ link: 'supermap', label: 'Duyuruyu gör' }, { link: 'giscontest', label: 'Yarışma sonuçları' }],
@@ -129,12 +129,12 @@ window.CONTENT = {
       intro: 'Kurumsal CBS platformu üzerinde özel çözümler geliştiren ekibi yönetiyorum; 300’ü aşkın projenin başarısı ekibimin sorumluluğunda.',
       focus: {
         title: 'Agentic geospatial intelligence',
-        text: 'Şu an en çok çalıştığım konu: yapay zeka ajanlarının mekânsal veri, harita servisleri ve kurumsal CBS iş akışlarıyla iş yapması.'
+        text: 'Şu anda odaklandığım konu: yapay zeka ajanlarının mekânsal veri, harita servisleri ve kurumsal CBS iş akışlarıyla iş yapması ve ajantik yapay zeka.'
       },
       items: [
         { title: 'Mekânsal sorunlar, custom çözümler', text: 'Kurumların mekânsal veri problemlerine platform üzerinde özel çözümler; onlarca kurumda canlı.' },
         { title: 'Web GIS ürünleri', text: 'İnteraktif harita, dashboard, REST API ve mekânsal veri tabanı; tasarımdan teslime.' },
-        { title: 'İzleme ve entegrasyon', text: 'Merkezi izleme ve kodsuz bildirimler; belge yönetimi, ERP ve CRM entegrasyonları.' }
+        { title: 'İzleme ve entegrasyon', text: 'Merkezi izleme ve bildirimler; belge yönetimi, ERP ve CRM entegrasyonları.' }
       ]
     },
     th: { period: 'Dönem', org: 'Kurum', role: 'Rol', place: 'Yer' },
@@ -260,7 +260,7 @@ window.CONTENT = {
         bullets: [
           'Built for the SuperMap 2020 international contest',
           'Spatial analysis on real-estate data, address matching and a map service',
-          'First prize, developer category'
+          'First prize in the developer category of the international contest'
         ],
         tags: ['SuperMap iClient', 'Leaflet', 'WebGIS', 'Spatial SQL'],
         links: [{ link: 'supermap', label: 'See the announcement' }, { link: 'giscontest', label: 'Contest results' }],
@@ -285,12 +285,12 @@ window.CONTENT = {
       intro: 'I lead the team building custom solutions on an enterprise GIS platform; the success of more than 300 projects is my team’s responsibility.',
       focus: {
         title: 'Agentic geospatial intelligence',
-        text: 'What I work on most right now: AI agents doing real work with spatial data, map services and enterprise GIS workflows.'
+        text: 'My current focus: AI agents doing real work with spatial data, map services and enterprise GIS workflows, and agentic AI.'
       },
       items: [
         { title: 'Spatial problems, custom solutions', text: 'Custom solutions on the platform for institutions’ spatial data problems; live in dozens of institutions.' },
         { title: 'Web GIS products', text: 'Interactive maps, dashboards, REST APIs and spatial databases, from design to delivery.' },
-        { title: 'Monitoring and integration', text: 'Central monitoring and no-code alerts; document management, ERP and CRM integrations.' }
+        { title: 'Monitoring and integration', text: 'Central monitoring and notifications; document management, ERP and CRM integrations.' }
       ]
     },
     th: { period: 'Period', org: 'Organisation', role: 'Role', place: 'Place' },
