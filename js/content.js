@@ -3,28 +3,34 @@ window.CONTENT = {
   links: {
     mail: 'mailto:recaialperemek@gmail.com',
     mailText: 'recaialperemek@gmail.com',
-    linkedin: 'https://www.linkedin.com/in/alper-emek-362520159/',
+    linkedin: 'https://www.linkedin.com/in/alperemek/',
     github: 'https://github.com/cartwheei',
     twitter: 'https://twitter.com/AlperEmek',
     facebook: 'https://www.facebook.com/alper.emekk/',
     isprs: 'https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XLIV-4-W3-2020/215/2020/',
     supermap: 'https://www.linkedin.com/posts/alper-emek-362520159_gis-supermap-webgis-activity-6727545753889185792-Lct5',
-    thesis: 'https://www.researchgate.net/publication/329940084_GORUNTU_SINIFLANDIRMA_ARAYUZU_PYTHON_VE_K-ORTALAMA_YONTEMI',
-    acar: 'https://www.linkedin.com/in/acargorkem/'
+    thesis: 'https://doi.org/10.15659/uzalcbs2018.6125',
+    hkmo: 'https://www.linkedin.com/posts/alperemek_tmmob-hkmo-gis-activity-7266160928012840960-K_Db',
+    giscontest: 'http://www.giscontest.com/en/list-39.aspx',
+    pressAkdeniz: 'https://www.akdeniz.edu.tr/tr/haber/akdeniz_universitesi_ogrencilerine_cinden_yazilim_odulu-2178',
+    pressHurriyet: 'https://www.hurriyet.com.tr/teknoloji/akdeniz-universitesi-ogrencilerine-cinden-yazilim-odulu-41685713'
   },
 
   points: [
     { id: 'ist', name: { tr: 'İstanbul', en: 'Istanbul' }, lon: 28.98, lat: 41.01, dx: -11, dy: -9, anchor: 'end' },
+    { id: 'esk', name: { tr: 'Eskişehir', en: 'Eskişehir' }, lon: 30.52, lat: 39.78, dx: -11, dy: 4, anchor: 'end' },
     { id: 'ank', name: { tr: 'Ankara', en: 'Ankara' }, lon: 32.86, lat: 39.93, dx: 11, dy: 4 },
     { id: 'ant', name: { tr: 'Antalya', en: 'Antalya' }, lon: 30.71, lat: 36.9, dx: 0, dy: 22, anchor: 'middle' },
     { id: 'rot', name: { tr: 'Rotterdam', en: 'Rotterdam' }, lon: 4.48, lat: 51.92, dx: -11, dy: 4, anchor: 'end' },
-    { id: 'roc', name: { tr: 'Rochester', en: 'Rochester' }, lon: -77.61, lat: 43.16, dx: 11, dy: 4 }
+    { id: 'roc', name: { tr: 'Rochester', en: 'Rochester' }, lon: -77.61, lat: 43.16, dx: 11, dy: 4 },
+    { id: 'wuh', name: { tr: 'Vuhan', en: 'Wuhan' }, lon: 114.31, lat: 30.59, dx: 11, dy: 4 }
   ],
 
   images: {
     sar: { poster: 'img/spacenet-poster.webp', gif: 'img/spacenet.gif' },
     rochester: { webp: 'img/supermap.webp', png: 'img/supermap.png' },
-    thesis: { webp: 'img/bitirme2.webp', png: 'img/bitirme2.png' }
+    thesis: { webp: 'img/bitirme2.webp', png: 'img/bitirme2.png' },
+    sensor4d: { webp: 'img/sensor4d.webp', png: 'img/sensor4d.png' }
   },
 
   tr: {
@@ -32,20 +38,21 @@ window.CONTENT = {
     description: 'Alper Emek: full-stack web GIS geliştirici. İnteraktif haritalar, mekânsal veri tabanları, uzaktan algılama ve derin öğrenme projeleri.',
     skip: 'İçeriğe geç',
     titleRole: 'GIS yazılım geliştirici',
-    nav: { projects: 'Projeler', stack: 'Yetenekler', experience: 'Deneyim', education: 'Eğitim', label: 'Bölümler' },
+    nav: { projects: 'Projeler', now: 'Şu an', experience: 'Deneyim', education: 'Eğitim', label: 'Bölümler' },
     langLabel: 'Dil',
-    theme: { toPlate: 'Kalıp görünümü', toPaper: 'Kağıt görünümü' },
+    toTop: 'Başa dön',
+    pressLabel: 'Basında',
     seals: { mail: 'e-posta', linkedin: 'in', github: 'GitHub', label: 'Hızlı bağlantılar' },
-    role: 'GIS yazılım geliştirici · full-stack web GIS',
+    role: 'GIS yazılım geliştirici · geospatial intelligence',
     cta: 'Projelere git',
     facts: [
-      ['Alan', 'İnteraktif harita, dashboard, REST API, mekânsal veri tabanı'],
+      ['Proje', { count: 300, suffix: '+', text: ' kurumsal proje' }],
       ['Yayın', 'SAR görüntülerinde U-Net ile bina tespiti — ISPRS Archives XLIV-4/W3-2020'],
       ['Ödül', 'SuperMap GIS Contest 2020 — geliştirici dalında birincilik'],
       ['Konum', 'İstanbul, Türkiye']
     ],
     globe: {
-      label: 'Dönen dünya küresi. Noktalar: İstanbul, Ankara, Antalya, Rotterdam, Rochester. Bir noktaya gelince konsol o yerdeki işleri sorgular.',
+      label: 'Dönen dünya küresi. Noktalar: İstanbul, Eskişehir, Ankara, Antalya, Rotterdam, Rochester, Vuhan. Bir noktaya gelince konsol o yerdeki işleri sorgular.',
       layer: 'places.geom',
       hint: 'sürükle · bir yere dokun',
       placesLabel: 'Yerler',
@@ -60,8 +67,22 @@ window.CONTENT = {
       typing: 'yazıyor…',
       history: 'Son komutlar'
     },
-    sec: { projects: 'Projeler', stack: 'Yetenekler', experience: 'Deneyim', education: 'Eğitim, yayın ve ödül', contact: 'İletişim' },
+    sec: { projects: 'Projeler', now: 'Şu an', experience: 'Deneyim', education: 'Eğitim, yayın ve ödül', contact: 'İletişim' },
     projects: [
+      {
+        id: 'sensor4d', img: 'sensor4d',
+        title: '4D web uygulaması ile sensör verilerinin görüntülenmesi',
+        meta: '3B web · sensör verisi · 2024',
+        bullets: [
+          'Elasticsearch’teki sensör verilerini (sıcaklık, ışık, nem, CO₂, hareket) 3B bina modeli üzerinde, zaman ekseniyle görselleştiren web uygulaması',
+          'three.js ile sıfırdan modellenen 4 katlı, 49 odalı ofis binası; odalar veri setindeki “room” kimlikleriyle eşlendi',
+          'Tüm tematik gösterimler Elasticsearch API’si üzerinden; tarihe göre sorgu ve canlı mod, zaman çizelgesi, tematik lejant',
+          'TMMOB 8. Coğrafi Bilgi Sistemleri Kongresi’nde sözlü olarak sunuldu (Ankara, 2024)'
+        ],
+        tags: ['three.js', 'Elasticsearch', 'WebGL'],
+        link: 'hkmo', linkLabel: 'Gönderiyi gör',
+        alt: '4D web uygulaması: dört katlı ofis binasının 3B modeli, odalar CO₂ değerine göre yeşil tonlarda; solda tematik seçimi, altta zaman çizelgesi'
+      },
       {
         id: 'sar', img: 'sar',
         title: 'SAR görüntülerinden U-Net ile bina tespiti',
@@ -83,31 +104,39 @@ window.CONTENT = {
         bullets: [
           'SuperMap 2020 uluslararası yarışması için geliştirildi',
           'Emlak verisi üzerinde mekânsal analiz, adres eşleme ve harita servisi',
-          'Geliştirici kategorisinde birincilik — Görkem Acar ile'
+          'Geliştirici kategorisinde birincilik'
         ],
         tags: ['SuperMap iClient', 'Leaflet', 'WebGIS', 'Mekânsal SQL'],
-        link: 'supermap', linkLabel: 'Duyuruyu gör',
+        links: [{ link: 'supermap', label: 'Duyuruyu gör' }, { link: 'giscontest', label: 'Yarışma sonuçları' }],
+        press: [['Hürriyet', 'pressHurriyet'], ['Akdeniz Üniversitesi', 'pressAkdeniz']],
         alt: 'Rochester şehir haritası; satılık emlak noktaları kırmızı, sağda adres eşleme paneli'
       },
       {
         id: 'thesis', img: 'thesis',
         title: 'Görüntü sınıflandırma arayüzü: Python ve K-Means',
-        meta: 'Masaüstü GIS · lisans tezi · 2018',
+        meta: 'Masaüstü GIS · lisans tezi · UZAL-CBS 2018',
         bullets: [
           'Uydu görüntüsü segmentasyonu yapan masaüstü uygulaması',
-          'Python tabanlı GIS yazılımlarına araç kutusu olarak eklenebilir arayüz'
+          'Python tabanlı GIS yazılımlarına araç kutusu olarak eklenebilir arayüz',
+          'VII. Uzaktan Algılama ve CBS Sempozyumu’nda (UZAL-CBS 2018, Eskişehir) bildiri olarak yayımlandı'
         ],
         tags: ['Python', 'K-Means', 'Masaüstü GIS'],
-        link: 'thesis', linkLabel: 'Tezi aç',
+        link: 'thesis', linkLabel: 'Bildiriyi aç',
         alt: 'Bitirme çalışması arayüzü; ortada Harita Mühendisliği Bölümü amblemi'
       }
     ],
-    stack: [
-      ['Ön yüz ve harita', ['React', 'Leaflet', 'Mapbox GL', 'OpenLayers', 'Low-code platform']],
-      ['Arka uç', ['Python · Flask', 'Node.js', 'REST API', 'Servis entegrasyonu']],
-      ['Veri tabanı', ['PostgreSQL · PostGIS', 'Oracle Spatial', 'MSSQL', 'Elasticsearch']],
-      ['GIS ve uzaktan algılama', ['GDAL', 'GeoServer', 'QGIS', 'Görüntü işleme']]
-    ],
+    now: {
+      intro: 'Kurumsal CBS platformu üzerinde özel çözümler geliştiren ekibi yönetiyorum; 300’ü aşkın projenin başarısı ekibimin sorumluluğunda.',
+      focus: {
+        title: 'Agentic geospatial intelligence',
+        text: 'Şu an en çok çalıştığım konu: yapay zeka ajanlarının mekânsal veri, harita servisleri ve kurumsal CBS iş akışlarıyla iş yapması.'
+      },
+      items: [
+        { title: 'Mekânsal sorunlar, custom çözümler', text: 'Kurumların mekânsal veri problemlerine platform üzerinde özel çözümler; onlarca kurumda canlı.' },
+        { title: 'Web GIS ürünleri', text: 'İnteraktif harita, dashboard, REST API ve mekânsal veri tabanı; tasarımdan teslime.' },
+        { title: 'İzleme ve entegrasyon', text: 'Merkezi izleme ve kodsuz bildirimler; belge yönetimi, ERP ve CRM entegrasyonları.' }
+      ]
+    },
     th: { period: 'Dönem', org: 'Kurum', role: 'Rol', place: 'Yer' },
     exp: [
       { period: '06/2022 –', org: 'Netcad Yazılım A.Ş.', role: 'Teknoloji Çözümleri Yöneticisi & GIS Yazılım Geliştirici', place: 'İstanbul' },
@@ -122,20 +151,24 @@ window.CONTENT = {
     ],
     pubHead: 'Yayın ve ödül',
     pub: [
+      { years: '2024', title: '4D Web Uygulaması ile Sensör Verilerinin Görüntülenmesi', text: 'Sensör verilerinin mekânsal ve zamansal görselleştirilmesi. TMMOB HKMO 8. CBS Kongresi’nde sözlü bildiri, Ankara.', link: 'hkmo', linkLabel: 'Gönderiyi gör' },
       { years: '2020', title: 'SAR görüntülerinde U-Net ile bina tespiti', text: 'CNN tabanlı U-Net; sınıflandırma maskesi için ön işleme adımları. International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences, XLIV-4/W3-2020.', link: 'isprs', linkLabel: 'Makaleyi aç' },
-      { years: '2020', title: 'SuperMap GIS Contest 2020 — geliştirici dalında birincilik', text: 'Emlak verisi üzerinde mekânsal analiz, harita servisi ve arayüz. Görkem Acar ile.', link: 'supermap', linkLabel: 'Duyuruyu gör' }
+      { years: '2020', title: 'SuperMap GIS Contest 2020 — geliştirici dalında birincilik', text: 'Emlak verisi üzerinde mekânsal analiz, harita servisi ve arayüz.', link: 'giscontest', linkLabel: 'Yarışma sonuçları', press: [['Hürriyet', 'pressHurriyet'], ['Akdeniz Üniversitesi', 'pressAkdeniz']] }
     ],
     contact: [
       ['E-posta', 'mail'], ['LinkedIn', 'linkedin'], ['GitHub', 'github'], ['Twitter', 'twitter'], ['Facebook', 'facebook']
     ],
     contactNote: 'Yeni bir harita, bir mekânsal veri problemi ya da birlikte yayın için yazın.',
-    colophon: 'Statik HTML · d3 · Netlify',
     rows: {
       ist: [
         { a: 'Yıldız Teknik Üniversitesi', b: 'Harita Müh., lisans', c: '2013 – 18', href: '#education' },
         { a: 'Deneyim', b: '2 kayıt', c: '2021 –', href: '#experience' }
       ],
-      ank: [{ a: 'Deneyim', b: '1 kayıt', c: '2021', href: '#experience' }],
+      esk: [{ a: 'UZAL-CBS 2018', b: 'görüntü sınıflandırma bildirisi', c: '2018', href: '#proj-thesis' }],
+      ank: [
+        { a: 'HKMO 8. CBS Kongresi', b: '4D web · sensör verisi bildirisi', c: '2024', href: '#education' },
+        { a: 'Deneyim', b: '1 kayıt', c: '2021', href: '#experience' }
+      ],
       ant: [
         { a: 'Akdeniz Üniversitesi', b: 'GIS ve UA, yüksek lisans', c: '2019 – 22', href: '#education' },
         { a: 'Deneyim', b: '1 kayıt', c: '2018 – 20', href: '#experience' }
@@ -147,10 +180,11 @@ window.CONTENT = {
       roc: [
         { a: 'SuperMap Contest', b: 'geliştirici dalında 1.', c: '2020', href: '#proj-rochester' },
         { a: 'Emlak WebGIS', b: 'analiz · servis · arayüz', c: '2020', href: '#proj-rochester' }
-      ]
+      ],
+      wuh: [{ a: 'SuperMap GIS Contest', b: 'birincilik ödülü', c: '2020', href: '#education' }]
     },
     summary: [
-      { place: 'ist', b: 'eğitim · deneyim', n: 3 }, { place: 'ant', b: 'eğitim · deneyim', n: 2 }, { place: 'rot', b: 'proje · yayın', n: 2 }, { place: 'roc', b: 'proje · ödül', n: 2 }, { place: 'ank', b: 'deneyim', n: 1 }
+      { place: 'ist', b: 'eğitim · deneyim', n: 3 }, { place: 'ant', b: 'eğitim · deneyim', n: 2 }, { place: 'ank', b: 'deneyim · bildiri', n: 2 }, { place: 'rot', b: 'proje · yayın', n: 2 }, { place: 'roc', b: 'proje · ödül', n: 2 }, { place: 'esk', b: 'bildiri', n: 1 }, { place: 'wuh', b: 'ödül', n: 1 }
     ],
     noscript: 'Bu sayfa küre ve konsol için JavaScript kullanır. Bağlantı: recaialperemek@gmail.com'
   },
@@ -160,20 +194,21 @@ window.CONTENT = {
     description: 'Alper Emek: full-stack web GIS developer. Interactive maps, spatial databases, remote sensing and deep learning projects.',
     skip: 'Skip to content',
     titleRole: 'GIS software developer',
-    nav: { projects: 'Work', stack: 'Stack', experience: 'Experience', education: 'Education', label: 'Sections' },
+    nav: { projects: 'Work', now: 'Now', experience: 'Experience', education: 'Education', label: 'Sections' },
     langLabel: 'Language',
-    theme: { toPlate: 'Plate view', toPaper: 'Paper view' },
+    toTop: 'Back to top',
+    pressLabel: 'In the press',
     seals: { mail: 'e-mail', linkedin: 'in', github: 'GitHub', label: 'Quick links' },
-    role: 'GIS software developer · full-stack web GIS',
+    role: 'GIS software developer · geospatial intelligence',
     cta: 'See the work',
     facts: [
-      ['Field', 'Interactive maps, dashboards, REST APIs, spatial databases'],
+      ['Projects', { count: 300, suffix: '+', text: ' enterprise projects' }],
       ['Paper', 'Building detection on SAR imagery with U-Net — ISPRS Archives XLIV-4/W3-2020'],
       ['Award', 'SuperMap GIS Contest 2020 — first prize, developer category'],
       ['Location', 'Istanbul, Türkiye']
     ],
     globe: {
-      label: 'Rotating globe. Points: Istanbul, Ankara, Antalya, Rotterdam, Rochester. Hovering a point queries the work at that place in the console.',
+      label: 'Rotating globe. Points: Istanbul, Eskişehir, Ankara, Antalya, Rotterdam, Rochester, Wuhan. Hovering a point queries the work at that place in the console.',
       layer: 'places.geom',
       hint: 'drag · tap a place',
       placesLabel: 'Places',
@@ -188,8 +223,22 @@ window.CONTENT = {
       typing: 'typing…',
       history: 'Recent commands'
     },
-    sec: { projects: 'Work', stack: 'Stack', experience: 'Experience', education: 'Education, paper and award', contact: 'Contact' },
+    sec: { projects: 'Work', now: 'Now', experience: 'Experience', education: 'Education, papers and award', contact: 'Contact' },
     projects: [
+      {
+        id: 'sensor4d', img: 'sensor4d',
+        title: 'Visualising sensor data in a 4D web application',
+        meta: '3D web · sensor data · 2024',
+        bullets: [
+          'Web application that visualises Elasticsearch sensor data (temperature, light, humidity, CO₂, motion) on a 3D building model along a time axis',
+          'A 4-storey, 49-room office building modelled from scratch in three.js; rooms matched to the dataset through their “room” IDs',
+          'Every thematic view runs through the Elasticsearch API; query by date or live mode, timeline slider, thematic legend',
+          'Presented orally at the TMMOB 8th Geographic Information Systems Congress (Ankara, 2024)'
+        ],
+        tags: ['three.js', 'Elasticsearch', 'WebGL'],
+        link: 'hkmo', linkLabel: 'See the post',
+        alt: '4D web application: 3D model of a four-storey office building, rooms shaded green by CO₂ level; thematic selector on the left, timeline at the bottom'
+      },
       {
         id: 'sar', img: 'sar',
         title: 'Building detection from SAR imagery with U-Net',
@@ -211,31 +260,39 @@ window.CONTENT = {
         bullets: [
           'Built for the SuperMap 2020 international contest',
           'Spatial analysis on real-estate data, address matching and a map service',
-          'First prize, developer category — with Görkem Acar'
+          'First prize, developer category'
         ],
         tags: ['SuperMap iClient', 'Leaflet', 'WebGIS', 'Spatial SQL'],
-        link: 'supermap', linkLabel: 'See the announcement',
+        links: [{ link: 'supermap', label: 'See the announcement' }, { link: 'giscontest', label: 'Contest results' }],
+        press: [['Hürriyet', 'pressHurriyet'], ['Akdeniz University', 'pressAkdeniz']],
         alt: 'Map of Rochester with properties for sale in red and an address-matching panel on the right'
       },
       {
         id: 'thesis', img: 'thesis',
         title: 'Image classification interface: Python and K-Means',
-        meta: 'Desktop GIS · BSc thesis · 2018',
+        meta: 'Desktop GIS · BSc thesis · UZAL-CBS 2018',
         bullets: [
           'Desktop application for satellite image segmentation',
-          'Pluggable as a toolbox into Python-based GIS software'
+          'Pluggable as a toolbox into Python-based GIS software',
+          'Published as a paper at the VII. Remote Sensing and GIS Symposium (UZAL-CBS 2018, Eskişehir)'
         ],
         tags: ['Python', 'K-Means', 'Desktop GIS'],
-        link: 'thesis', linkLabel: 'Open the thesis',
+        link: 'thesis', linkLabel: 'Read the paper',
         alt: 'Thesis application window with the Geomatics Engineering department emblem'
       }
     ],
-    stack: [
-      ['Front-end and maps', ['React', 'Leaflet', 'Mapbox GL', 'OpenLayers', 'Low-code platform']],
-      ['Back-end', ['Python · Flask', 'Node.js', 'REST API', 'Service integration']],
-      ['Databases', ['PostgreSQL · PostGIS', 'Oracle Spatial', 'MSSQL', 'Elasticsearch']],
-      ['GIS and remote sensing', ['GDAL', 'GeoServer', 'QGIS', 'Image processing']]
-    ],
+    now: {
+      intro: 'I lead the team building custom solutions on an enterprise GIS platform; the success of more than 300 projects is my team’s responsibility.',
+      focus: {
+        title: 'Agentic geospatial intelligence',
+        text: 'What I work on most right now: AI agents doing real work with spatial data, map services and enterprise GIS workflows.'
+      },
+      items: [
+        { title: 'Spatial problems, custom solutions', text: 'Custom solutions on the platform for institutions’ spatial data problems; live in dozens of institutions.' },
+        { title: 'Web GIS products', text: 'Interactive maps, dashboards, REST APIs and spatial databases, from design to delivery.' },
+        { title: 'Monitoring and integration', text: 'Central monitoring and no-code alerts; document management, ERP and CRM integrations.' }
+      ]
+    },
     th: { period: 'Period', org: 'Organisation', role: 'Role', place: 'Place' },
     exp: [
       { period: '06/2022 –', org: 'Netcad Yazılım A.Ş.', role: 'Technology Solutions Manager & GIS Software Developer', place: 'Istanbul' },
@@ -248,22 +305,26 @@ window.CONTENT = {
       { years: '2019 – 2022', school: 'Akdeniz University', text: 'MSc — GIS and Remote Sensing. R&D, software development and an international publication.' },
       { years: '2013 – 2018', school: 'Yıldız Technical University', text: 'BSc — Geomatics Engineering.' }
     ],
-    pubHead: 'Paper and award',
+    pubHead: 'Papers and award',
     pub: [
+      { years: '2024', title: '4D Web Application for Visualizing Sensor Data', text: 'Spatial and temporal visualisation of sensor data. Oral paper at the 8th GIS Congress of TMMOB HKMO, Ankara.', link: 'hkmo', linkLabel: 'See the post' },
       { years: '2020', title: 'Building detection on SAR imagery with U-Net', text: 'CNN-based U-Net; pre-processing pipeline for the classification mask. International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences, XLIV-4/W3-2020.', link: 'isprs', linkLabel: 'Read the paper' },
-      { years: '2020', title: 'SuperMap GIS Contest 2020 — first prize, developer category', text: 'Spatial analysis on real-estate data, a map service and a front-end. With Görkem Acar.', link: 'supermap', linkLabel: 'See the announcement' }
+      { years: '2020', title: 'SuperMap GIS Contest 2020 — first prize, developer category', text: 'Spatial analysis on real-estate data, a map service and a front-end.', link: 'giscontest', linkLabel: 'Contest results', press: [['Hürriyet', 'pressHurriyet'], ['Akdeniz University', 'pressAkdeniz']] }
     ],
     contact: [
       ['E-mail', 'mail'], ['LinkedIn', 'linkedin'], ['GitHub', 'github'], ['Twitter', 'twitter'], ['Facebook', 'facebook']
     ],
     contactNote: 'Write about a new map, a spatial data problem, or a paper to co-author.',
-    colophon: 'Static HTML · d3 · Netlify',
     rows: {
       ist: [
         { a: 'Yıldız Technical University', b: 'BSc Geomatics Eng.', c: '2013 – 18', href: '#education' },
         { a: 'Experience', b: '2 rows', c: '2021 –', href: '#experience' }
       ],
-      ank: [{ a: 'Experience', b: '1 row', c: '2021', href: '#experience' }],
+      esk: [{ a: 'UZAL-CBS 2018', b: 'image classification paper', c: '2018', href: '#proj-thesis' }],
+      ank: [
+        { a: 'HKMO 8th GIS Congress', b: '4D web · sensor data paper', c: '2024', href: '#education' },
+        { a: 'Experience', b: '1 row', c: '2021', href: '#experience' }
+      ],
       ant: [
         { a: 'Akdeniz University', b: 'MSc GIS & RS', c: '2019 – 22', href: '#education' },
         { a: 'Experience', b: '1 row', c: '2018 – 20', href: '#experience' }
@@ -275,10 +336,11 @@ window.CONTENT = {
       roc: [
         { a: 'SuperMap Contest', b: '1st, developer category', c: '2020', href: '#proj-rochester' },
         { a: 'Real-estate WebGIS', b: 'analysis · service · UI', c: '2020', href: '#proj-rochester' }
-      ]
+      ],
+      wuh: [{ a: 'SuperMap GIS Contest', b: 'first prize', c: '2020', href: '#education' }]
     },
     summary: [
-      { place: 'ist', b: 'education · experience', n: 3 }, { place: 'ant', b: 'education · experience', n: 2 }, { place: 'rot', b: 'project · paper', n: 2 }, { place: 'roc', b: 'project · award', n: 2 }, { place: 'ank', b: 'experience', n: 1 }
+      { place: 'ist', b: 'education · experience', n: 3 }, { place: 'ant', b: 'education · experience', n: 2 }, { place: 'ank', b: 'experience · paper', n: 2 }, { place: 'rot', b: 'project · paper', n: 2 }, { place: 'roc', b: 'project · award', n: 2 }, { place: 'esk', b: 'paper', n: 1 }, { place: 'wuh', b: 'award', n: 1 }
     ],
     noscript: 'This page uses JavaScript for the globe and the console. Contact: recaialperemek@gmail.com'
   }

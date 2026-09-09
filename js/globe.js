@@ -7,6 +7,8 @@ window.initGlobe = function initGlobe(el, points, opts) {
   const R = 284;
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   const cb = Object.assign({ onSelect: function () {}, onCenter: function () {}, lang: 'tr' }, opts || {});
+  // Turkish dotted i must upper-case to İ (Eskişehir → ESKİŞEHİR); use the tr locale for Turkish UI or Turkish spellings.
+  const upper = function (s, lang) { return s.toLocaleUpperCase(lang === 'tr' || /[şğıİŞĞ]/.test(s) ? 'tr-TR' : 'en-US'); };
 
   const svg = d3.select(el).append('svg')
     .attr('viewBox', '0 0 ' + S + ' ' + S)
@@ -44,6 +46,7 @@ window.initGlobe = function initGlobe(el, points, opts) {
   let hover = null, selected = null, dragging = false, paused = false, inView = true;
   let vel = 0, targetVel = reduce ? 0 : 0.0045;
   let tween = null; // {from:[l,p], to:[l,p], t0, dur}
+  let dirty = true;  // re-render only when something moved or a state changed
 
   const visible = function (d) {
     const r = proj.rotate();
@@ -55,8 +58,8 @@ window.initGlobe = function initGlobe(el, points, opts) {
     .attr('tabindex', 0)
     .attr('role', 'button')
     .attr('aria-label', function (d) { return d.name[cb.lang]; })
-    .on('mouseenter', function (e, d) { hover = d.id; targetVel = 0; cb.onSelect(d.id, 'hover'); })
-    .on('mouseleave', function () { hover = null; if (!selected && !reduce) targetVel = 0.0045; cb.onSelect(selected, 'leave'); })
+    .on('mouseenter', function (e, d) { hover = d.id; targetVel = 0; dirty = true; cb.onSelect(d.id, 'hover'); })
+    .on('mouseleave', function () { hover = null; if (!selected && !reduce) targetVel = 0.0045; dirty = true; cb.onSelect(selected, 'leave'); })
     .on('click', function (e, d) { e.stopPropagation(); api.select(d.id, 'click'); })
     .on('keydown', function (e, d) {
       if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); api.select(d.id, 'key'); }
@@ -70,7 +73,7 @@ window.initGlobe = function initGlobe(el, points, opts) {
     .attr('x', function (d) { return d.dx == null ? 13 : d.dx * 1.2; })
     .attr('y', function (d) { return d.dy == null ? 5 : d.dy * 1.2; })
     .attr('text-anchor', function (d) { return d.anchor || 'start'; })
-    .text(function (d) { return d.name[cb.lang].toUpperCase(); });
+    .text(function (d) { return upper(d.name[cb.lang], cb.lang); });
 
   // Clicking open sea clears the selection.
   svg.on('click', function () { if (selected) api.select(null, 'clear'); });
@@ -117,19 +120,21 @@ window.initGlobe = function initGlobe(el, points, opts) {
   const timer = d3.timer(function (t) {
     const dt = Math.min(50, t - last); last = t;
     if (tween) {
-      const k = Math.min(1, (t - tween.t0) / tween.dur);
+      const k = Math.max(0, Math.min(1, (d3.now() - tween.t0) / tween.dur));
       const e = 1 - Math.pow(1 - k, 3);
       proj.rotate([tween.from[0] + (tween.to[0] - tween.from[0]) * e, tween.from[1] + (tween.to[1] - tween.from[1]) * e]);
       if (k >= 1) tween = null;
+      dirty = true;
     } else {
       const goal = (paused || !inView || dragging || document.hidden) ? 0 : targetVel;
       vel += (goal - vel) * 0.06;
       if (Math.abs(vel) > 1e-5) {
         const r = proj.rotate();
         proj.rotate([r[0] + vel * dt, r[1]]);
-      }
+        dirty = true;
+      } else if (vel !== 0) { vel = 0; }
     }
-    render();
+    if (dirty) { render(); dirty = false; }
     if (t - lastCenter > 120) {
       lastCenter = t;
       const r = proj.rotate();
@@ -142,13 +147,21 @@ window.initGlobe = function initGlobe(el, points, opts) {
     .on('drag', function (e) {
       const r = proj.rotate();
       proj.rotate([r[0] + e.dx * 0.35, Math.max(-65, Math.min(65, r[1] - e.dy * 0.35))]);
+      dirty = true;
     })
     .on('end', function () { dragging = false; el.classList.remove('is-dragging'); }));
 
   svg.on('mouseenter', function () { paused = true; }).on('mouseleave', function () { paused = false; });
 
-  fetch('data/countries-110m.json')
-    .then(function (r) { return r.json(); })
+  // Local copy first; the public world-atlas package is the fallback if the local file is unreachable.
+  const loadAtlas = function () {
+    return fetch('data/countries-110m.json')
+      .then(function (r) { if (!r.ok) throw new Error('local atlas ' + r.status); return r.json(); })
+      .catch(function () {
+        return fetch('https://cdn.jsdelivr.net/npm/world-atlas@2.0.2/countries-110m.json').then(function (r) { return r.json(); });
+      });
+  };
+  loadAtlas()
     .then(function (topo) {
       land = topojson.feature(topo, topo.objects.land);
       borders = topojson.mesh(topo, topo.objects.countries, function (a, b) { return a !== b; });
@@ -169,7 +182,7 @@ window.initGlobe = function initGlobe(el, points, opts) {
         while (to0 - from[0] > 180) to0 -= 360;
         while (to0 - from[0] < -180) to0 += 360;
         const to = [to0, -Math.max(-55, Math.min(55, d.lat)) + 8];
-        tween = reduce ? null : { from: from, to: to, t0: performance.now(), dur: 750 };
+        tween = reduce ? null : { from: from, to: to, t0: d3.now(), dur: 750 };
         if (reduce) proj.rotate(to);
         targetVel = 0;
       } else if (!reduce) {
@@ -182,7 +195,7 @@ window.initGlobe = function initGlobe(el, points, opts) {
     setLang: function (lang) {
       cb.lang = lang;
       pts.attr('aria-label', function (d) { return d.name[lang]; });
-      pts.select('text').text(function (d) { return d.name[lang].toUpperCase(); });
+      pts.select('text').text(function (d) { return upper(d.name[lang], lang); });
     },
     setInView: function (v) { inView = v; },
     stop: function () { timer.stop(); }

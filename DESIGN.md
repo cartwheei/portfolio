@@ -17,21 +17,7 @@ colors:
   veg-2: "#d9e4cf"
   seal: "#b52d24"
   seal-dot: "#c8352b"
-  plate-ground: "#15130f"
-  plate-ground-2: "#1e1b16"
-  plate-key: "#efe7d6"
-  plate-key-soft: "#cfc6b3"
-  plate-hydro: "#7fb2d6"
-  plate-hydro-text: "#a9cde6"
-  plate-hydro-2: "#1a2c3a"
-  plate-contour: "#d2895f"
-  plate-contour-text: "#e5ad8c"
-  plate-contour-2: "#3a2820"
-  plate-veg: "#8fb97e"
-  plate-veg-text: "#b9d6ac"
-  plate-veg-2: "#1f2c1c"
-  plate-seal: "#e0574a"
-  console-ink: "#06070a"
+  on-plate: "#f4efe4"
   console-keyword: "#9fc4e0"
   console-string: "#e8b79a"
   console-function: "#b9d19a"
@@ -120,20 +106,20 @@ components:
     textColor: "{colors.key}"
   cartouche-printed:
     backgroundColor: "{colors.key}"
-    textColor: "{colors.paper}"
+    textColor: "{colors.on-plate}"
     typography: "{typography.control}"
     rounded: "{rounded.none}"
     padding: "9px 14px"
   cartouche-primary:
     backgroundColor: "{colors.contour}"
-    textColor: "{colors.paper}"
+    textColor: "{colors.on-plate}"
     typography: "{typography.control}"
     rounded: "{rounded.none}"
     padding: "12px 18px"
     height: "44px"
   cartouche-primary-hover:
     backgroundColor: "{colors.contour-text}"
-    textColor: "{colors.paper}"
+    textColor: "{colors.on-plate}"
   stamp:
     backgroundColor: "transparent"
     textColor: "{colors.seal}"
@@ -159,6 +145,11 @@ components:
     backgroundColor: "{colors.paper}"
     textColor: "{colors.key}"
     rounded: "{rounded.none}"
+  focus:
+    backgroundColor: "{colors.hydro}"
+    textColor: "{colors.on-plate}"
+    rounded: "{rounded.none}"
+    padding: "28px 32px 30px"
   console-sql:
     backgroundColor: "{colors.key}"
     textColor: "{colors.paper}"
@@ -180,7 +171,7 @@ components:
 
 The site is one topographic map sheet printed in colour separation. A single black keyline plate draws every boundary: the sheet frame, the sticky head strip, every table rule, every box, the coastline of the globe. Four flat plate colours (hydrography blue, contour brown, vegetation green, publisher's seal red) are pressed into that keyline one at a time, each owning one field of the page. Nothing is a gradient, nothing floats, nothing is rounded except a rubber stamp. Depth exists only as registration: a colour plate sits a few pixels off the black until it slides into place.
 
-Density is that of a printed sheet, not a dashboard. Text is set in a map-title serif (Bitter) with a sans (Source Sans 3) for running copy and tables, and a monospace (JetBrains Mono) reserved for the psql console and coordinates. Labels are small, tracked, uppercase table headings in the keyline ink; notes that read like water names are set in Bitter italic in the hydro blue. The dark theme is not a "dark mode" but the plate view: the ground turns to press black, the keyline prints as paper, plate hues brighten one step, tints darken, and the world otherwise holds.
+Density is that of a printed sheet, not a dashboard. Text is set in a map-title serif (Bitter) with a sans (Source Sans 3) for running copy and tables, and a monospace (JetBrains Mono) reserved for the psql console and coordinates. Labels are small, tracked, uppercase table headings in the keyline ink; notes that read like water names are set in Bitter italic in the hydro blue. The sheet has one ground: paper. There is no dark theme; the plate colours are printed once, on paper, and read the same way in every viewport.
 
 The world was translated from Edo woodblock block registration (kento notches, one block per colour, red publisher seal) to topographic colour separation. It rejects the category defaults: no dark hero with a glowing network globe, no grid of same-size cards, no single-accent white modernist grid, no shadows.
 
@@ -194,22 +185,22 @@ The world was translated from Edo woodblock block registration (kento notches, o
 
 ## Colors
 
-A paper ground carrying one black keyline and four flat printing-plate colours, each with a text-safe dark and a pale tint; the plate view inverts ground and keyline while the plate hues hold.
+A paper ground carrying one black keyline and four flat printing-plate colours, each with a text-safe dark and a pale tint. Single theme: paper only.
 
 ### Primary
-- **Keyline Ink** (`key`): the one black plate. Every border, rule, frame, coastline, body text, and the printed fill of a pressed toggle. In plate view it becomes **Plate Paper** (`plate-key`), the light ink on press black.
-- **Sheet Paper** (`paper`): the ground of the whole sheet and of every keyline box. **Paper 2** (`paper-2`) is the recessed paper: cartouche hover, sea fill on the globe, print frame backing, the result cell. In plate view these become `plate-ground` and `plate-ground-2`.
+- **Keyline Ink** (`key`): the one black plate. Every border, rule, frame, coastline, body text, and the printed fill of a pressed toggle.
+- **Sheet Paper** (`paper`): the ground of the whole sheet and of every keyline box. **Paper 2** (`paper-2`) is the recessed paper: cartouche hover, sea fill on the globe, print frame backing, the result cell.
 - **Soft Ink** (`key-soft`): secondary text (table heads, hints, colophon, fact labels, result sub-lines). Never used for borders.
+- **On Plate** (`on-plate`): the text colour printed on any solid plate fill (pressed toggle, active nav cartouche, active place chip, the primary contour cartouche). Numerically equal to `paper`; kept as its own token so a filled control never reaches for literal white.
 
 ### Secondary
 The four printing plates. Each has three values: the **plate** (flat fill, markers, list bullets, active nav cartouche), the **plate text** (italic notes and meta at AA on paper), and the **tint** (section ground). A section owns exactly one plate.
-- **Hydro Blue** (`hydro` / `hydro-text` / `hydro-2`): the Stack section, the globe's sea hatch and graticule, the title-role and hero role line, the contact note, result-row counts, education years, the stack list bullets, text selection. It is the voice of notes and water names.
+- **Hydro Blue** (`hydro` / `hydro-text` / `hydro-2`): the Now section (its tint as ground and, once, as the solid fill of the focus box with `on-plate` text), the globe's sea hatch and graticule, the title-role and hero role line, the contact note, result-row counts, education years, text selection. It is the voice of notes and water names.
 - **Contour Brown** (`contour` / `contour-text` / `contour-2`): the Experience section, globe country borders, the primary call-to-action cartouche, experience periods, table-row hover.
 - **Vegetation Green** (`veg` / `veg-text` / `veg-2`): the Projects section and globe land. Because green is the lightest plate, an active green nav cartouche keeps keyline text instead of paper.
 - **Seal Red** (`seal`, dot `seal-dot`): the publisher's mark. Contact stamps, the Contact plate heading colour, globe place points and pulse ring, the active place cartouche, result-row hover text, and the focus ring. Never a section tint, never a rule.
 
 ### Neutral
-- **Press Black** (`console-ink`): the psql cell ground in plate view only (on paper the psql cell is `key`).
 - **Console Syntax** (`console-keyword`, `console-string`, `console-function`): the three highlight inks inside the psql cell, pale blue / pale brown / pale green echoes of the three plates. Console only.
 
 ### Named Rules
@@ -228,13 +219,13 @@ The four printing plates. Each has three values: the **plate** (flat fill, marke
 **Character:** A printed map title (heavy slab serif, tight leading, slightly negative tracking) over a plain cartographic sans set with tabular numerals. Bitter italic in a plate colour is the annotation voice, the way water names are lettered in italic on a sheet. Mono appears only where the interface is literally a terminal or a coordinate readout.
 
 ### Hierarchy
-- **Display** (Bitter 800, `clamp(58px, 7vw, 96px)`, 0.94, -0.015em): the name only. Printed in three registered plates: blue and brown copies offset (-1.5px, 1px) and (1.5px, -1px) under the black, multiply-blended on paper, plain in plate view.
+- **Display** (Bitter 800, `clamp(58px, 7vw, 96px)`, 0.94, -0.015em): the name only. Printed in three registered plates: blue and brown copies offset (-1.5px, 1px) and (1.5px, -1px) under the black, multiply-blended on paper.
 - **Headline** (Bitter 700, `clamp(36px, 4.2vw, 52px)`, 1.02, -0.012em): section headings in the left column of each plate; sticky at 112px on desktop.
-- **Title** (Bitter 700, `clamp(26px, 2.5vw, 34px)`, 1.12, -0.01em): project titles.
-- **Subtitle** (Bitter 700, 20px, 1.2): stack column heads, education/publication column heads (with a keyline rule under), entry titles. The head-strip name is Bitter 800 at 21px; globe labels Bitter 700 at 17px with a paper stroke.
+- **Title** (Bitter 700, `clamp(26px, 2.5vw, 34px)`, 1.12, -0.01em): project titles. The Now focus title steps up one notch to `clamp(28px, 2.6vw, 36px)`/1.08 in `on-plate` on the solid hydro box.
+- **Subtitle** (Bitter 700, 20px, 1.2): education/publication column heads (with a keyline rule under), entry titles; Now item titles at 21px. The head-strip name is Bitter 800 at 21px; globe labels Bitter 700 at 17px with a paper stroke.
 - **Note** (Bitter italic 400, `clamp(20px, 1.8vw, 25px)`, 1.25): hero role line and contact note, always in `hydro-text`. Project meta uses the same voice at 17px in the section's plate text.
 - **Meta** (Bitter italic 500, 16px, 1.5): years, periods, result-row counts; coloured by the plate that owns the field (`hydro-text` for education and results, `contour-text` for experience).
-- **Body** (Source Sans 3 400, 17px, 1.55): running copy; 16px in tables and entries, 16.5px in lists; measure 52-62ch.
+- **Body** (Source Sans 3 400, 17px, 1.55): running copy; 18px for the Now intro (66ch) and focus copy (62ch, 1.5), 16px in tables, entries, and Now items (52ch), 16.5px in lists; measure 52-66ch.
 - **Label** (Source Sans 3 600, 12px, 0.1em, uppercase): table heads, fact labels, globe head strip, result title, tags (0.06em). Always a heading of a table or box, never a kicker above a title.
 - **Control** (Source Sans 3 600, 13px, 0.1em, uppercase): cartouche text; hero action cartouches drop to sentence case at 15px.
 - **Mono** (JetBrains Mono 400, 13.5px/21px): the psql query; 12px in head strips, coordinates, scale line, colophon; 0.02em tracking.
@@ -246,18 +237,18 @@ The four printing plates. Each has three values: the **plate** (flat fill, marke
 
 ## Layout
 
-The page is one sheet: a 3px keyline frame with 22px paper margin around it (14px under 720px, 10px under 420px) and four 20px registration marks centred on the corners. Inside, a sticky head strip divides into cells with 3px vertical rules: title cartouche, section nav, language and theme switches, three red seals. The hero is a 5/7 grid (name and facts left, keyline globe box and console right) with a horizontal gutter of `clamp(20px, 3.4vw, 48px)` and column gap `clamp(32px, 4.5vw, 72px)`.
+The page is one sheet: a 3px keyline frame with 22px paper margin around it (14px under 720px, 10px under 420px) and four 20px registration marks centred on the corners. Inside, a sticky head strip divides into cells with 3px vertical rules: title cartouche, section nav, the TR/EN language switch, three red seals. The hero is a 5/7 grid (name and facts left, keyline globe box and console right) with a horizontal gutter of `clamp(20px, 3.4vw, 48px)` and column gap `clamp(32px, 4.5vw, 72px)`.
 
-Below the hero, each section is a plate: a 3px rule on top, vertical padding `clamp(48px, 6vw, 80px)` above and `clamp(56px, 6vw, 88px)` below, a 3/9 grid with the headline in the narrow left column (sticky at 112px) and the body right. Section bodies use hairline-divided grids rather than cards: projects are 7/5 text/print rows separated by 1.5px rules with 40px vertical padding; the stack is a four-column hairline table; experience is a real table; education and publication are two columns of 108px-year entries.
+Below the hero, each section is a plate: a 3px rule on top, vertical padding `clamp(48px, 6vw, 80px)` above and `clamp(56px, 6vw, 88px)` below, a 3/9 grid with the headline in the narrow left column (sticky at 112px) and the body right. Section bodies use hairline-divided grids rather than cards: projects are 7/5 text/print rows separated by 1.5px rules with 40px vertical padding; the Now section is a solid hydro focus box over an 18px intro (3px keyline, 28px 32px 30px padding) and a two-column grid of items, each opened by a 1.5px rule; experience is a real table; education and publication are two columns of 108px-year entries.
 
-Rhythm inside cells is 12px/18px (cell padding), 16px (table cells), 22px (stack columns); control gaps are 8-12px. Breakpoints: 1100px hides the head-strip seals; 960px stacks hero, plate, project, and two-column grids and halves the stack table; 720px moves the nav out of the head strip into a 2x2 block of cartouches under it, stacks the console, and turns the experience table into stacked rows with `data-th` labels; 420px hides the title role and makes hero actions full width.
+Rhythm inside cells is 12px/18px (cell padding), 16px (table cells), 18px/22px (Now item top/bottom), 28px (Now intro, focus, and item-grid spacing); control gaps are 8-12px. Breakpoints: 1100px hides the head-strip seals; 960px collapses hero, plate, project, Now, and two-column grids to one column and tightens the focus box to 22px 20px 24px; 720px moves the nav out of the head strip into a 2x2 block of cartouches under it, puts the console cells in one column, and turns the experience table into one block per row with `data-th` labels; 420px hides the title role and makes hero actions full width.
 
 ## Elevation & Depth
 
-There are no shadows anywhere. Depth is registration: a colour plate is a flat field that sits translated (-10px, 6px) off the keyline at 0 opacity and slides to (0, 0) at full opacity when the section enters view. Photographs get the same treatment: a grayscale image under a `multiply` field of the section's plate colour at 0.55 opacity (screen at 0.35 in plate view), offset (-8px, 6px) until registered; hover lifts the print (-3px, -3px) and thins the field to 0.28. The hero name carries permanent blue and brown misregistration copies under the black. Hatch textures (45° hairlines in hydro, horizontal 13px contour lines in contour) are the only surface texture and sit inside the tint at 22% plate colour.
+There are no shadows anywhere. Depth is registration: a colour plate is a flat field that sits translated (-10px, 6px) off the keyline at 0 opacity and slides to (0, 0) at full opacity when the section enters view. Photographs get the same treatment: a grayscale image under a `multiply` field of the section's plate colour at 0.55 opacity, offset (-8px, 6px) until registered; hover lifts the print (-3px, -3px) and thins the field to 0.28. The hero name carries permanent blue and brown misregistration copies under the black. Hatch textures (45° hairlines in hydro, horizontal 13px contour lines in contour) are the only surface texture and sit inside the tint at 22% plate colour.
 
 ### Named Rules
-**The Flat Impression Rule.** No `box-shadow`, no blur, no glow, no gradient fills. If something must read as "above", it is a solid plate translated off the keyline, or a 3px keyline box. The single permitted blend is `multiply` (paper) / `screen` (plate view) for a colour plate over a grayscale image.
+**The Flat Impression Rule.** No `box-shadow`, no blur, no glow, no gradient fills. If something must read as "above", it is a solid plate translated off the keyline, or a 3px keyline box. The single permitted blend is `multiply` for a colour plate over a grayscale image.
 
 ## Shapes
 
@@ -270,8 +261,8 @@ A boxed label with a registration notch. The only control shape on the sheet.
 - **Shape:** square, 1.5px keyline border, 7px kento notch top-left (`clip-path: polygon(0 7px, 7px 7px, 7px 0, 100% 0, 100% 100%, 0 100%)`), min-height 38px, padding 9px 14px; 34px/7px 10px in switches and place chips, 44px/12px 18px in hero actions.
 - **Default:** transparent on paper, keyline text, Control type (600 13px uppercase 0.1em).
 - **Hover:** ground turns to `paper-2`; 0.2s. **Active (pressed):** translate (1px, 1px), 0.18s registration ease.
-- **Printed (aria-pressed / aria-current):** fills solid. Toggles print `key` with paper text; nav cartouches print their section's plate (`--plate` set by `data-plate`), green keeps keyline text; place chips print `seal`. The notch hairlines disappear on a printed cartouche.
-- **Primary (`.fill-contour`):** solid `contour`, paper text, hover darkens to `contour-text`. Used once, for the hero call to action.
+- **Printed (aria-pressed / aria-current):** fills solid. Toggles print `key` with `on-plate` text; nav cartouches print their section's plate (`--plate` set by `data-plate`), green keeps keyline text; place chips print `seal`. The notch hairlines disappear on a printed cartouche.
+- **Primary (`.fill-contour`):** solid `contour`, `on-plate` text, hover darkens to `contour-text`. Used once, for the hero call to action.
 - **Segmented (`.seg`):** adjacent cartouches overlap borders by 1.5px.
 - **Focus:** 2px `seal` outline, offset -4px inside the box.
 
@@ -281,15 +272,15 @@ A rubber seal: 2px `seal` border, 3px radius, `seal` text in Bitter 700 13px, ro
 ### Tag
 Uppercase Source Sans 600 12px at 0.06em in a 1.5px keyline box, padding 4px 9px 3px, transparent. Technology tags under project meta; no states.
 
-### Keyline Box (globe box, print, stack, table, sheet)
+### Keyline Box (globe box, print, focus, table, sheet)
 - **Corner Style:** square.
-- **Border:** 3px `key` for the sheet, head strip, globe box, prints, table heads; 1.5px for the stack grid, experience table body, inner rules.
+- **Border:** 3px `key` for the sheet, head strip, globe box, prints, focus box, table heads; 1.5px for the Now item rules, experience table body, inner rules.
 - **Background:** `paper`; `paper-2` for print backing and the result cell.
 - **Shadow Strategy:** none (see Elevation & Depth).
-- **Internal Padding:** 10px 16px head strips, 12px 18px cells, 16px table cells, 22px stack columns.
+- **Internal Padding:** 10px 16px head strips, 12px 18px cells, 16px table cells, 28px 32px 30px the focus box.
 
 ### Sheet Head (navigation)
-Sticky at top 0 inside the frame, `paper` ground, 3px keyline rule below and between cells. Cells: title cartouche (Bitter 800 21px name, Bitter italic 15px role in `hydro-text`), nav cartouches (active prints the section plate as the visitor scrolls), TR/EN segment and theme toggle, three stamps. Under 1100px the stamps drop; under 720px the nav leaves the strip and prints as a 2x2 block of cartouches below it.
+Sticky at top 0 inside the frame, `paper` ground, 3px keyline rule below and between cells. Cells: title cartouche (Bitter 800 21px name, Bitter italic 15px role in `hydro-text`), four nav cartouches (Projeler / Şu an / Deneyim / Eğitim, EN Work / Now / Experience / Education; `data-plate` veg, hydro, contour, key; active prints the section plate as the visitor scrolls), TR/EN segment, three stamps. Under 1100px the stamps drop; under 720px the nav leaves the strip and prints as a 2x2 block of cartouches below it.
 
 ### Plate (section field)
 A section owning one plate: `--tint`, `--plate-text`, `--plate` set by `.plate-veg` / `.plate-hydro` / `.plate-contour` / `.plate-key` / `.plate-seal`. The tint is drawn on `::before` and registers in on `.is-in` (IntersectionObserver). Hydro carries a 45° hairline hatch, contour horizontal contour lines; key and seal plates have transparent tints.
@@ -298,13 +289,18 @@ A section owning one plate: `--tint`, `--plate-text`, `--plate` set by `.plate-v
 A 3px keyline figure, 3:2 frame, `paper-2` backing. Image grayscale (contrast 1.1) under a multiply field of the section plate at 0.55; registers in with the row; hover lifts the print (-3px, -3px), scales the image 1.02, and lets 60% of the colour through.
 
 ### Globe
-An orthographic d3 globe drawn as registration layers: `.pl-key` (coastline 1.1px and 3px rim in `key`), `.pl-blue` (sea in `paper-2` with hydro hatch, 15° graticule in `hydro`), `.pl-brown` (borders 0.8px `contour`), `.pl-green` (land `veg`), `.pl-seal` (6.5px `seal-dot` points with a 1.5px paper stroke, 12px pulse ring, Bitter 700 17px labels with a 4px paper stroke). Active point fills `key` at 1.25 scale with an infinite ring pulse. Head strip: mono layer name, hydro coordinates, soft hint. Scale line: a 30px half-filled keyline bar, mono scale text, mono projection. Place chips are cartouches that print `seal` when active.
+An orthographic d3 globe drawn as registration layers: `.pl-key` (coastline 1.1px and 3px rim in `key`), `.pl-blue` (sea in `paper-2` with hydro hatch, 15° graticule in `hydro`), `.pl-brown` (borders 0.8px `contour`), `.pl-green` (land `veg`), `.pl-seal` (6.5px `seal-dot` points with a 1.5px paper stroke, 12px pulse ring, Bitter 700 17px labels with a 4px paper stroke). Active point fills `key` at 1.25 scale with an infinite ring pulse. The globe redraws only when rotation or hover state changed (a dirty flag in the frame loop), so an idle sheet costs nothing. Head strip: mono layer name, hydro coordinates, soft hint. Scale line: a 30px half-filled keyline bar, mono scale text, mono projection. Place chips are cartouches that print `seal` when active.
 
 ### Console (psql + result)
-Two cells under a 3px rule, split by a 3px vertical rule. Left, the psql cell: `key` ground (press black `console-ink` in plate view), paper mono text at 13.5px/21px, keyword/string/function inks, a blinking 8x15 caret, and a 60%-opacity history list of meta-commands (`\pset theme plate`, language switches). Right, the result cell: `paper-2` ground, Label title, rows divided by 1.5px hairlines; each row is a link or button with 600 name, soft sub-line, and an italic `hydro-text` count or year; hover turns the name `seal`. Rows enter with a 0.35s slide staggered 0.05s.
+Two cells under a 3px rule, split by a 3px vertical rule. Left, the psql cell: `key` ground, paper mono text at 13.5px/21px typed at 96 characters per second, keyword/string/function inks, a blinking 8x15 caret, and a 60%-opacity history list of the last three meta-commands (`\set lang tr` / `\set lang en`). Right, the result cell: `paper-2` ground, Label title, rows divided by 1.5px hairlines; each row is a link or button with 600 name, soft sub-line, and an italic `hydro-text` count or year; hover turns the name `seal`. Rows enter with a 0.35s slide staggered 0.05s.
+
+### Now (current work)
+The hydro plate's body, three pieces in one column: the **focus box** first (the keyword the section opens on), then an intro paragraph (Source Sans 3 18px/1.55, 66ch), then the **item grid**.
+- **Focus box:** the one solid plate field on the sheet. 3px `key` border, `hydro` fill, `on-plate` text, padding 28px 32px 30px (22px 20px 24px under 960px), 28px below. Title Bitter 700 `clamp(28px, 2.6vw, 36px)`/1.08 at -0.01em with 12px under; copy 18px/1.5, 62ch. No hatch, no radius, no shadow; it is a plate printed solid inside its own tint. One per section.
+- **Item grid:** two equal columns, gap `clamp(24px, 3vw, 48px)`, one column under 960px. Each item opens with a 1.5px `key` rule, padding 18px 0 22px; title Bitter 700 21px/1.2 with 8px under; copy Source Sans 3 16px/1.5, 52ch. No boxes, no bullets, no tags.
 
 ### Experience Table
-Full-width 1.5px keyline table, Label heads over a 3px rule, 16px cells, periods in italic `contour-text`, org 600, place soft; row hover tints `contour-2`. Under 720px it collapses to stacked rows with `data-th` labels.
+Full-width 1.5px keyline table, Label heads over a 3px rule, 16px cells, periods in italic `contour-text`, org 600, place soft; row hover tints `contour-2`. Under 720px it collapses to one block per row with `data-th` labels.
 
 ### Motion
 One ease, `cubic-bezier(.2, .8, .2, 1)`, and one duration, 0.7s, for every registration. On load: name plates (1s, blue at 0.15s, brown at 0.45s), then globe plates keyline-first, blue 0.3s, brown 0.6s, green 0.9s, seal 1.2s (`reg-b`/`reg-r`/`reg-g`/`reg-s`, sliding 5-7px). Per section on scroll: tint and print register in over 0.7s. Micro: 0.18-0.2s for control states, 0.5s for print hover, 1.6s ease-out infinite ring pulse, 1s stepped caret blink. Under `prefers-reduced-motion: reduce` every animation and transition is removed and all plates sit registered.
@@ -318,7 +314,6 @@ One ease, `cubic-bezier(.2, .8, .2, 1)`, and one duration, 0.7s, for every regis
 - **Do** set annotation lines (roles, meta, years, counts) in Bitter italic in the owning plate's text colour.
 - **Do** print images grayscale under a multiply field of the section plate inside a 3px keyline frame.
 - **Do** keep red for stamps, globe points, the active place, and focus; a red stamp is always rotated and always a link.
-- **Do** mirror every colour into the plate view: ground to `plate-ground`, keyline to `plate-key`, plate hues one step lighter, tints dark.
 
 ### Don't:
 - **Don't** use box-shadow, blur, glow, or gradient fills; depth is a translated flat plate.
@@ -328,3 +323,4 @@ One ease, `cubic-bezier(.2, .8, .2, 1)`, and one duration, 0.7s, for every regis
 - **Don't** use uppercase tracked labels as kickers above titles; Label type heads a table, box, or strip.
 - **Don't** introduce cards with equal boxes; sections are hairline-divided rows, columns, and tables on the plate.
 - **Don't** add a second ease or duration for registration; everything registers with `cubic-bezier(.2, .8, .2, 1)` over 0.7s.
+- **Don't** add a second theme or ground; the sheet is paper only, and a solid fill takes `on-plate` text, never literal white.

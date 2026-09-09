@@ -1,10 +1,9 @@
-/* Page logic: language, theme, rendering from CONTENT, console, globe wiring, scroll registration. */
+/* Page logic: language, rendering from CONTENT, console, globe wiring, scroll registration. */
 (function () {
   const C = window.CONTENT;
   const root = document.documentElement;
   const reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
   let lang = root.lang === 'en' ? 'en' : 'tr';
-  let theme = root.dataset.theme === 'plate' ? 'plate' : 'paper';
   const T = function () { return C[lang]; };
   const $ = function (s, r) { return (r || document).querySelector(s); };
   const $$ = function (s, r) { return Array.prototype.slice.call((r || document).querySelectorAll(s)); };
@@ -20,15 +19,23 @@
     $$('[data-i18n]').forEach(function (el) { const v = get(t, el.dataset.i18n); if (v != null) el.textContent = v; });
     $$('[data-i18n-aria]').forEach(function (el) { const v = get(t, el.dataset.i18nAria); if (v != null) el.setAttribute('aria-label', v); });
     $$('[data-lang]').forEach(function (b) { b.setAttribute('aria-pressed', String(b.dataset.lang === lang)); });
-    const tb = $('#themeToggle');
-    tb.textContent = theme === 'plate' ? t.theme.toPaper : t.theme.toPlate;
-    tb.setAttribute('aria-pressed', String(theme === 'plate'));
   }
 
   function renderFacts() {
     $('#facts').innerHTML = T().facts.map(function (f) {
-      return '<div class="fact"><dt>' + esc(f[0]) + '</dt><dd>' + esc(f[1]) + '</dd></div>';
+      const v = f[1];
+      const dd = (v && typeof v === 'object')
+        ? '<span class="count" data-to="' + v.count + '" data-suffix="' + esc(v.suffix || '') + '">' + (reduce ? v.count + (v.suffix || '') : '0') + '</span>' + esc(v.text || '')
+        : esc(v);
+      return '<div class="fact"><dt>' + esc(f[0]) + '</dt><dd>' + dd + '</dd></div>';
     }).join('');
+    startCounters();
+  }
+
+  // Counters climb on the shared clock: 0 to the target with an ease-out, once per render.
+  let counters = [];
+  function startCounters() {
+    counters = reduce ? [] : $$('.count').map(function (el) { return { el: el, to: +el.dataset.to, suffix: el.dataset.suffix || '', start: performance.now() + 250, dur: 1400, done: false }; });
   }
 
   function picture(p) {
@@ -39,24 +46,45 @@
     return '<picture><source type="image/webp" srcset="' + im.webp + '"><img src="' + im.png + '" alt="' + esc(p.alt) + '" loading="lazy"></picture>';
   }
 
+  function linksHtml(x) {
+    const list = x.links ? x.links.slice() : [];
+    if (x.link && C.links[x.link]) list.unshift({ link: x.link, label: x.linkLabel });
+    const out = list.filter(function (l) { return C.links[l.link]; }).map(function (l) {
+      return '<a class="cartouche" href="' + C.links[l.link] + '" target="_blank" rel="noopener">' + esc(l.label) + '</a>';
+    });
+    return out.length ? '<p class="links">' + out.join('') + '</p>' : '';
+  }
+
+  function pressHtml(x) {
+    if (!x.press || !x.press.length) return '';
+    return '<p class="press"><span>' + esc(T().pressLabel) + '</span> ' + x.press.filter(function (r) { return C.links[r[1]]; }).map(function (r) {
+      return '<a href="' + C.links[r[1]] + '" target="_blank" rel="noopener">' + esc(r[0]) + '</a>';
+    }).join('<span class="sep">·</span>') + '</p>';
+  }
+
   function renderProjects() {
     $('#projects-list').innerHTML = T().projects.map(function (p) {
-      return '<article class="proj" id="proj-' + p.id + '">' +
+      const bullets = (p.bullets || []).length ? '<ul>' + p.bullets.map(function (b) { return '<li>' + esc(b) + '</li>'; }).join('') + '</ul>' : '';
+      const tags = (p.tags || []).length ? '<p class="tags">' + p.tags.map(function (g) { return '<span class="tag">' + esc(g) + '</span>'; }).join('') + '</p>' : '';
+      const link = linksHtml(p) + pressHtml(p);
+      const figure = p.img && C.images[p.img] ? '<figure class="print"><div class="print-frame">' + picture(p) + '</div></figure>' : '';
+      return '<article class="proj' + (figure ? '' : ' no-print') + '" id="proj-' + p.id + '">' +
         '<div class="proj-text">' +
           '<h3>' + esc(p.title) + '</h3>' +
           '<p class="meta">' + esc(p.meta) + '</p>' +
-          '<ul>' + p.bullets.map(function (b) { return '<li>' + esc(b) + '</li>'; }).join('') + '</ul>' +
-          '<p class="tags">' + p.tags.map(function (g) { return '<span class="tag">' + esc(g) + '</span>'; }).join('') + '</p>' +
-          '<a class="cartouche" href="' + C.links[p.link] + '" target="_blank" rel="noopener">' + esc(p.linkLabel) + '</a>' +
+          bullets + tags + link +
         '</div>' +
-        '<figure class="print"><div class="print-frame">' + picture(p) + '</div></figure>' +
+        figure +
       '</article>';
     }).join('');
   }
 
-  function renderStack() {
-    $('#stack-list').innerHTML = T().stack.map(function (g) {
-      return '<div class="stack-col"><h3>' + esc(g[0]) + '</h3><ul>' + g[1].map(function (i) { return '<li>' + esc(i) + '</li>'; }).join('') + '</ul></div>';
+  function renderNow() {
+    const n = T().now;
+    $('#now-intro').textContent = n.intro;
+    $('#now-focus').innerHTML = '<h3>' + esc(n.focus.title) + '</h3><p>' + esc(n.focus.text) + '</p>';
+    $('#now-list').innerHTML = n.items.map(function (i) {
+      return '<div class="now-item"><h3>' + esc(i.title) + '</h3><p>' + esc(i.text) + '</p></div>';
     }).join('');
   }
 
@@ -75,7 +103,7 @@
       return '<div class="entry"><span class="years">' + esc(e.years) + '</span><div><h4>' + esc(e.school) + '</h4><p>' + esc(e.text) + '</p></div></div>';
     }).join('');
     $('#pub').innerHTML = '<h3>' + esc(t.pubHead) + '</h3>' + t.pub.map(function (e) {
-      return '<div class="entry"><span class="years">' + esc(e.years) + '</span><div><h4>' + esc(e.title) + '</h4><p>' + esc(e.text) + '</p><a class="cartouche" href="' + C.links[e.link] + '" target="_blank" rel="noopener">' + esc(e.linkLabel) + '</a></div></div>';
+      return '<div class="entry"><span class="years">' + esc(e.years) + '</span><div><h4>' + esc(e.title) + '</h4><p>' + esc(e.text) + '</p>' + linksHtml(e) + pressHtml(e) + '</div></div>';
     }).join('');
   }
 
@@ -96,8 +124,9 @@
   }
 
   function renderAll() {
-    renderStatic(); renderFacts(); renderProjects(); renderStack(); renderExperience(); renderEducation(); renderContact(); renderPlaces();
-    observeReveals(); observeGif();
+    // Each renderer runs on its own so one failure cannot blank the sections after it.
+    [renderStatic, renderFacts, renderProjects, renderNow, renderExperience, renderEducation, renderContact, renderPlaces, observeReveals, observeGif]
+      .forEach(function (fn) { try { fn(); } catch (err) { console.error(fn.name, err); } });
   }
 
   /* ---------- console ---------- */
@@ -152,8 +181,15 @@
   }
 
   function tick() {
+    counters.forEach(function (c) {
+      if (c.done) return;
+      const k = Math.max(0, Math.min(1, (performance.now() - c.start) / c.dur));
+      const e = 1 - Math.pow(1 - k, 3);
+      c.el.textContent = Math.round(c.to * e) + (k >= 1 ? c.suffix : '');
+      if (k >= 1) c.done = true;
+    });
     if (typing && !typing.done) {
-      const n = Math.min(typing.text.length, Math.floor((performance.now() - typing.start) / 1000 * 72));
+      const n = Math.min(typing.text.length, Math.floor((performance.now() - typing.start) / 1000 * 96));
       queryEl.textContent = typing.text.slice(0, n);
       queryEl.insertAdjacentHTML('beforeend', '<span class="caret" aria-hidden="true"></span>');
       if (n >= typing.text.length) { typing.done = true; typing.finish(); }
@@ -211,13 +247,6 @@
       pushHistory('\\set lang ' + lang);
       runQuery(current);
     });
-  });
-  $('#themeToggle').addEventListener('click', function () {
-    theme = theme === 'plate' ? 'paper' : 'plate';
-    root.dataset.theme = theme;
-    store('theme', theme);
-    renderStatic();
-    pushHistory('\\pset theme ' + theme);
   });
 
   /* ---------- scroll: registration reveal, nav spy, lazy gif, globe pause ---------- */
@@ -293,6 +322,21 @@
   }
   if (narrow.addEventListener) narrow.addEventListener('change', placeNav); else narrow.addListener(placeNav);
   placeNav();
+
+  /* ---------- back to top: appears once the hero has scrolled past ---------- */
+  const toTop = $('#toTop');
+  let toTopQueued = false;
+  function updateToTop() {
+    toTopQueued = false;
+    toTop.classList.toggle('is-visible', window.scrollY > 640);
+  }
+  window.addEventListener('scroll', function () { if (!toTopQueued) { toTopQueued = true; requestAnimationFrame(updateToTop); } }, { passive: true });
+  toTop.addEventListener('click', function () {
+    window.scrollTo({ top: 0, behavior: reduce ? 'instant' : 'smooth' });
+    const first = $('.nav a');
+    if (first) first.focus({ preventScroll: true });
+  });
+  updateToTop();
 
   /* ---------- boot ---------- */
   renderAll();
