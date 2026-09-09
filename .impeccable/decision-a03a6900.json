@@ -1,0 +1,132 @@
+{
+  "title": "Görsel dünyayı seç",
+  "question": "Zar 'Hipsometrik Atlas Levhası'nı atadı. Onu tut, bir alternatif al ya da yeniden at. Hero kompozisyonun (sol ad/olgular, sağ küre + psql konsolu) her seçenekte sabit kalır; seçim paleti, tipografiyi ve sayfanın dilini belirler.",
+  "options": [
+    {
+      "id": "assigned",
+      "label": "Hipsometrik Atlas Levhası",
+      "kicker": "THE ROLL",
+      "lineage": "İsviçre okul atlası levhaları, Imhof ekolü yükselti tintleri (1930–70)",
+      "thesis": "Sayfa bir atlas levhası: yükselti basamakları paleti, levha kenarlığı gridi, lejant ise gezinmeyi verir.",
+      "palette": ["#0e3a4f", "#dfe9ee", "#7fae6a", "#dfb46a", "#b8703e", "#14232b"],
+      "materials": ["düz, kapalı tint alanları", "tek keyline + neat-line çerçeve", "dar grotesk harita etiketleri", "italik hidrografi serifi", "mono psql"],
+      "viewport": "İnce çift çizgili levha çerçevesi; sol üstte levha numarası ve 'ALPER EMEK' aralıklı büyük harflerle, altında olgular yerleşim etiketi gibi. Sağda tintli küre (kara: ova yeşili → ocher, deniz: açık mavi), noktalar üçgen kot işareti + ad. Küre altında psql konsolu ve sonuç paneli. Sayfanın sol kenarında sabit dikey yükselti lejantı: her basamak bir bölüm (Projeler, Yetenekler, Deneyim, Eğitim, İletişim); kaydırınca aktif basamak dolar, yanında bölümün sayısı yazar. Açık tema = kara levhası, koyu tema = batimetri levhası.",
+      "risk": "Sıcak kağıt + serif renditiona kayarsa 'nostaljik harita' klişesine düşer; palet doygun basamaklarda, zemin deniz tonunda tutulmalı. Lejant-nav mobilde yatay şeride dönmek zorunda.",
+      "raised": [
+        { "from": "challenger-phosphor", "raise": "Durum kendini yazdırır: dil ve tema geçişleri konsola psql meta-komutu (\\set lang tr, \\pset theme dark) olarak düşer; toast yok, ekstra krom yok." },
+        { "from": "challenger-cracktro", "raise": "Tek saat: küre dönüşü, sayaçlar ve ortaya çıkmalar tek paylaşılan zaman çizgisinde çalışır; reduced-motion saati durdurur, ad hoc animasyon yok." },
+        { "from": "challenger-ukiyoe", "raise": "Kayıtlı plakalar: tintler tek keyline içinde düz alanlar, gradyan yok; küre önce keyline sonra tint olarak çizilir; dar ekranda plakalar ters sırayla düşer." },
+        { "from": "challenger-vertical", "raise": "Görsel levha ölçeğinde: her proje görseli kendi levha satırının tamamını alır; kart içinde küçük resim yok." },
+        { "from": "challenger-plankton", "raise": "İz belleği: küre gezilen yerleri sönen bir izle hatırlar; konsol son üç sorguyu tarihçe olarak tutar." },
+        { "from": "challenger-raku", "raise": "Kor kuralı: siena vurgu yalnızca aktif duruma (hover, geçerli bölüm, odak) ayrılır; dinlenirken sayfada vurgu rengi yok." }
+      ]
+    },
+    {
+      "id": "model-pick",
+      "label": "Masaüstü GIS Çalışma Alanı",
+      "kicker": "IMPECCABLE’S PICK",
+      "lineage": "QGIS / ArcMap masaüstü arayüzü: katman paneli, kanvas, öznitelik tablosu, durum çubuğu",
+      "thesis": "Portföy bir GIS proje dosyası gibi açılır: katman ağacı bölümleri, kanvas küreyi, öznitelik tablosu deneyimi taşır.",
+      "palette": ["#f4f5f6", "#c9ced3", "#2b2f33", "#f5d90a", "#1f7a8c"],
+      "materials": ["panel kromu", "onay kutulu katman ağacı", "koordinat/ölçek durum çubuğu", "sistem UI yazı ailesi", "seçim sarısı"],
+      "viewport": "Üstte ince menü şeridi; solda katman ağacı (Projeler, Yetenekler, Deneyim, Eğitim; TR ve EN iki ayrı katman, biri açık); ortada küre kanvası ve fare koordinatı; sağda ad/olgular 'katman özellikleri' paneli; altta öznitelik tablosu olarak deneyim; en altta EPSG:4326 · ölçek · koordinat durum çubuğu.",
+      "risk": "En tanıdık 'GIS odaklı' çözüm ve bu kategoride çoğu koşunun indiği yer: yazılım ekran görüntüsü gibi okunur, portföy sıcaklığı araç kromuna yenilebilir. Mobilde panel düzeni tamamen yeniden kurulmalı."
+    },
+    {
+      "id": "challenger-phosphor",
+      "label": "Fosfor Terminal",
+      "verdict": "competitive",
+      "lineage": "gece makine odasında yeşil fosfor CRT terminali",
+      "thesis": "Tüm portföy tek bir psql oturumu: her bölüm bir sorgu, her sonuç bir tablo.",
+      "palette": ["#33ff66", "#176e3a", "#b6ffb6", "#07210f", "#020805"],
+      "materials": ["fosfor parlaması", "80 sütun mono alan", "tarama çizgileri", "kavisli cam kenar"],
+      "viewport": "Siyah cam üzerinde 80 sütunlu transkript; küre yeşil tel-kafes (eski NORAD ekranı), noktalar yanıp sönen imleç blokları; ad ve olgular '\\d alper' çıktısı olarak yazılır, projeler SELECT sonuç tabloları.",
+      "case": "Geliştirici kimliğinde güçlü ve PostGIS ustalığını doğrudan gösterir; ama SAR/Rochester görselleri ve iki dilli hızlı tarama netliğinde atlasa yenilir.",
+      "risk": "Terminal klişesi; tek mono aile tablolarda ve mobilde yorucu, görseller tonlanamaz.",
+      "hero": "https://impeccable.style/worlds/cards/signals-instruments-phosphor-terminal-midnight-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/signals-instruments-phosphor-terminal-midnight.webp"
+    },
+    {
+      "id": "challenger-ukiyoe",
+      "label": "Kayıtlı Plaka Baskısı",
+      "verdict": "competitive",
+      "lineage": "Edo ağaç baskısının renk kaydı, harita baskısındaki renk ayrımına çevrildi: keyline, hidrografi mavisi, eşyükselti kahvesi, bitki yeşili",
+      "thesis": "Topografik harita baskısı gibi: siyah keyline önce oturur, sonra mavi, kahverengi ve yeşil plakalar sırayla kayıt olur.",
+      "palette": ["#1a1a1a", "#2f6f9f", "#a0522d", "#6b9a5a", "#f4efe4"],
+      "materials": ["kayıtlı renk plakaları", "tek keyline", "bokashi geçişi", "oyma kartuş kontroller"],
+      "viewport": "Ad ve küre keyline olarak biter, tint plakaları 300 ms arayla kayıt olur; her bölüm ayrı bir plaka; dil/tema kontrolleri oyma kartuş, aktif olan rengini basar.",
+      "case": "Harita baskısına çevrildiğinde GIS kitlesi anında tanır (kimlik ekseni eşit); netlik yükleme animasyonuna bağlı, statik halde atlas kadar taranabilir değil.",
+      "risk": "Kağıt + kırmızı mühür renditionu 'Japon estetik' klişesine kayar; harita plakası çevirisi disiplin ister.",
+      "hero": "https://impeccable.style/worlds/cards/graphic-worlds-publishing-ukiyoe-block-registration-hero.webp",
+      "board": "https://impeccable.style/worlds/cards/graphic-worlds-publishing-ukiyoe-block-registration.webp"
+    },
+    {
+      "id": "challenger-cracktro",
+      "label": "Cracktro Kaydırıcı",
+      "verdict": "declined",
+      "lineage": "demoscene cracktro başlık ekranı",
+      "thesis": "Derinlik sıradır; kutu yok, çizgi yok, her satır ekranı aşar.",
+      "palette": ["#000000", "#9a9a9a", "#f2ecdc", "#ffb000"],
+      "materials": ["bitmap yazı", "üç hızda toz alanı", "yayılan boşluk"],
+      "viewport": "Boşlukta tek fildişi bitmap satır, arkada üç hızda gri toz, başta kehribar imleç.",
+      "case": "GIS kitlesi demoscene ile özdeşleşmez; kutu ve çizgi yasağı iki dilli tablo taramasını bozar.",
+      "kept": "Tek saat: tüm hareket paylaşılan bir zaman çizgisinden.",
+      "risk": "Nostalji gösterisi olarak okunur.",
+      "hero": "https://impeccable.style/worlds/cards/operate-c-cracktro-scroller-queue-hero.webp"
+    },
+    {
+      "id": "challenger-vertical",
+      "label": "Dikey Akış",
+      "verdict": "declined",
+      "lineage": "tam ekran dikey video akışı",
+      "thesis": "Her proje tüm ekranı alır; sonraki bir kaydırma ötede bekler.",
+      "palette": ["#000000", "#ffffff", "#2a2a2a"],
+      "materials": ["tam ekran medya", "alt scrim", "sağ aksiyon rayı"],
+      "viewport": "Tam ekran görsel, sağda dikey glif rayı, sol altta yazar satırı ve altyazı.",
+      "case": "Araştırmacı kitle için yanlış ritüel; tablo, deneyim ve iki dil bu forma sığmaz.",
+      "kept": "Görsel levha ölçeğinde: proje görselleri küçük resim olmaz.",
+      "risk": "Sosyal medya taklidi olarak okunur.",
+      "hero": "https://impeccable.style/worlds/cards/pop-culture-shelf-vertical-video-feed-surface-hero.webp"
+    },
+    {
+      "id": "challenger-plankton",
+      "label": "Biyolüminesan Dalga",
+      "verdict": "declined",
+      "lineage": "gece denizinde plankton izi",
+      "thesis": "Her etkileşim sönen bir ışık izi bırakır.",
+      "palette": ["#030a12", "#1e90ff", "#66e0ff", "#0b2a3a"],
+      "materials": ["GPU parçacıklar", "ince ışıklı harfler", "siyah su"],
+      "viewport": "Siyah deniz, imleç izleri, ince ışıklı harfler.",
+      "case": "Dekoratif kalır; işi anlatmaz, koyu zemin + glow klişesine yakın.",
+      "kept": "İz belleği: gezilen yerler sönen izle hatırlanır.",
+      "risk": "Parçacık sistemi içeriği gölgeler.",
+      "hero": "https://impeccable.style/worlds/cards/reefs-bioluminescent-nocturnal-plankton-wake-stars-hero.webp"
+    },
+    {
+      "id": "challenger-raku",
+      "label": "Raku Duman",
+      "verdict": "declined",
+      "lineage": "raku fırınından çıkan kor kap",
+      "thesis": "Kurum-siyah zemin, çatlak sırlı yüzey, kor turuncu yalnızca sıcak parçada.",
+      "palette": ["#0f0e0d", "#d9d5cc", "#ff6a1f", "#6b6560"],
+      "materials": ["karbonlu kil", "çatlak sır", "kaba fırça işaretleri"],
+      "viewport": "Asimetrik fırın günlüğü, kaba fırça başlıkları, tek kor vurgu.",
+      "case": "GIS kitlesiyle bağ yok; ürün netliği düşük.",
+      "kept": "Kor kuralı: vurgu yalnızca aktif durumda.",
+      "risk": "Seramik estetiği konuyla ilgisiz okunur.",
+      "hero": "https://impeccable.style/worlds/cards/clay-ceramics-fracture-raku-smoke-flash-hero.webp"
+    }
+  ],
+  "reroll": { "registers": ["safer", "bolder"] },
+  "buildPath": { "value": "code", "toggle": false },
+  "canon": true,
+  "canonCard": {
+    "label": "Kategori standardı",
+    "thesis": "Koyu hero, parlayan ağ küresi, üç proje kartı, yetenek rozetleri, iletişim bandı; kusursuz işçilikle.",
+    "palette": ["#0b1220", "#111827", "#38bdf8", "#f8fafc"],
+    "materials": ["cam kartlar", "gradyan parlama", "nötr sans"],
+    "viewport": "Tam genişlik koyu hero, ortada parlayan küre, altında kart gridi ve rozetler.",
+    "risk": "Rakiplerden ayırt edilemez; mevcut sitenin daha iyi yapılmış hali."
+  },
+  "steer": true
+}

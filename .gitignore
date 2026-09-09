@@ -1,1 +1,7 @@
 .vscode
+.DS_Store
+.playwright-mcp/
+.impeccable/review/
+.impeccable/mocks/
+.impeccable/questions/
+claude-export/

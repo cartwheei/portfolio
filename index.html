@@ -1,163 +1,152 @@
- <!DOCTYPE html>
- <html lang="en">
+<!DOCTYPE html>
+<html lang="tr">
 <head>
-
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recai Alper Emek Portfolio</title>
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/style.css">
-    
-    <script src="https://kit.fontawesome.com/393b001943.js" crossorigin="anonymous"></script>
-
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alper Emek — GIS yazılım geliştirici</title>
+  <meta name="description" content="Alper Emek: full-stack web GIS geliştirici. İnteraktif haritalar, mekânsal veri tabanları, uzaktan algılama ve derin öğrenme projeleri.">
+  <meta name="color-scheme" content="light">
+  <meta name="theme-color" content="#f4efe4">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bitter:ital,wght@0,500;0,700;0,800;1,400;1,500&family=Source+Sans+3:ital,wght@0,400;0,600;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css?v=20260909r">
+  <link rel="stylesheet" href="css/style.css?v=20260909r">
+  <script>
+    (function () {
+      try {
+        var l = localStorage.getItem('lang');
+        if (l === 'en' || l === 'tr') document.documentElement.lang = l;
+      } catch (e) {}
+    })();
+  </script>
 </head>
-
 <body>
-    <header>
-        <!-- <div class="logo">
+  <a class="skip" href="#main" data-i18n="skip">İçeriğe geç</a>
 
-            <img src="" salt="">
+  <div class="sheet" id="top">
+    <span class="regmark rm-tl" aria-hidden="true"></span>
+    <span class="regmark rm-tr" aria-hidden="true"></span>
+    <span class="regmark rm-bl" aria-hidden="true"></span>
+    <span class="regmark rm-br" aria-hidden="true"></span>
 
-        </div> -->
-        <button class="nav-toggle" aria-label="toggle navigation">
-            <span class="hamburger"></span>
-        </button>
-        <nav class="nav">
-                <ul class="nav__list">
-                        <li class="nav__item"><a href ="#home" class="nav__link">Home</a></li>
-                        <li class="nav__item"><a href ="#services" class="nav__link">Portfolio</a></li>
-                        <li class="nav__item"><a href ="#about" class="nav__link">About me</a></li>
-                        <li class="nav__item"><a href ="#social" class="nav__link">Contact</a></li> 
-                </ul>
-        </nav>
+    <header class="sheet-head">
+      <nav class="nav" aria-label="Bölümler" data-i18n-aria="nav.label">
+        <a class="cartouche" href="#projects" data-plate="veg" data-i18n="nav.projects">Projeler</a>
+        <a class="cartouche" href="#now" data-plate="hydro" data-i18n="nav.now">Şu an</a>
+        <a class="cartouche" href="#experience" data-plate="contour" data-i18n="nav.experience">Deneyim</a>
+        <a class="cartouche" href="#education" data-plate="key" data-i18n="nav.education">Eğitim</a>
+      </nav>
+      <div class="switches">
+        <div class="seg" role="group" aria-label="Dil" data-i18n-aria="langLabel">
+          <button type="button" class="cartouche" data-lang="tr" lang="tr" aria-pressed="true">TR</button>
+          <button type="button" class="cartouche" data-lang="en" lang="en" aria-pressed="false">EN</button>
+        </div>
+      </div>
+      <div class="seals" aria-label="Hızlı bağlantılar" data-i18n-aria="seals.label">
+        <a class="stamp" href="mailto:recaialperemek@gmail.com" data-i18n="seals.mail">e-posta</a>
+        <a class="stamp round" href="https://www.linkedin.com/in/alperemek/" target="_blank" rel="noopener" aria-label="LinkedIn">in</a>
+        <a class="stamp alt" href="https://github.com/cartwheei" target="_blank" rel="noopener">GitHub</a>
+      </div>
     </header>
 
-
-        <!-- introduction -->
-    <section class="intro" id="home">
-        <h1 class="section__title section__title--intro">
-                <strong> Alper Emek </strong>
-        </h1>
-        <p class="section__subtitle section__subtitle--intro">
-            Gis Developer
-        </p>
-        <img src="img/alper.PNG" alt="Alper Emek" class="intro__img">
-    </section>
-
-    <!-- my services  -->
-    <section class="my-services" id="services">
-        <h2 class="section__title section__title--services">Project Portfolio</h2>
-        <div class="services">
-            <div class="service">
-                <div class="service__title">
-                    <h3>Building Detection From Sar Images 
-                        Using U-Net Deep Learning Model</h3>
-                </div>
-                <div class="service__text">
-                    <p> Pre-processing steps were developed to create a classification mask. 
-                        Unet (CNN based) algorithm is used in the project. 
-                        Used libraries : keras, numpy, scikit-image, geopandas, sklearn, rasterio.
-                        It published on ISPRS archives.</p>
-                </div>
-                <div class="service__image">
-                    <a class="service__link" href="https://www.int-arch-photogramm-remote-sens-spatial-inf-sci.net/XLIV-4-W3-2020/215/2020/" target="_blank" >
-                            <img src="img/spacenet.gif" id="supermap_img">  Details
-                    </a>
-                </div>
-
-            </div> <!--service-->
-            <div class="service">
-                <div class="service__title">
-                    <h3>Rochester City Real Estate Web Application</h3>
-                </div>
-                <div class="service__text">
-                    <p id="supermap_p">As part of the 2020 Supermap international contest, 
-                        an online real estate map web service was developed. We won first prize in the developer category 
-                        at the end of the competition with 
-                        <a class="service__link" href="https://www.linkedin.com/in/acargorkem/" target="_blank"><strong>Görkem Acar</strong></a>.</p>
-                </div>
-
-                <div class="service__image">
-                    <a class="service__link" href="https://www.linkedin.com/posts/alper-emek-362520159_gis-supermap-webgis-activity-6727545753889185792-Lct5" target="_blank" >
-                            <img src="img/supermap.png" id="rochester_img">  Details
-                    </a>
-                </div>
-            </div> <!--service-->
-
-            <div class="service">
-                <div class="service__title">
-                    <h3>Image Classification Interface: Phyton And K-Means Method</h3>
-                </div>
-                <div class="service__text">
-                <p>My undergraduate thesis. We develop desktop application that makes satellite image segmentation. 
-                     The interface created in this project will also can be added as a toolbox to the Python language based
-                    GIS software.</p>
-                </div>
-                <div class="service__image">
-                    <a class="service__link" 
-                    href="https://www.researchgate.net/publication/329940084_GORUNTU_SINIFLANDIRMA_ARAYUZU_PYTHON_VE_K-ORTALAMA_YONTEMI" target="_blank" >
-                            <img src="img/bitirme2.png" id="bitirme_img"> Details</a>
-                </div>
-            </div> <!--service-->
-        </div> <!--services-->
-       
-    </section>
-
-    <!-- about me  -->
-    <section class="about-me" id="about">
-        <h2 class="section__title section__title--about">Who I am</h2>
-        <p class="section__subtitle section__subtitle--about">GIS and Remote Sensing Msc. Student    </p>
-        <div class="about-me__body">
-            <p>Enthusiastic geomatic and GIS  software engineer participating 
-                in the complete product development lifecycle of successfully 
-                launched applications. I think analytically and produces solutions using the 
-                spatial knowledge acquired during my education. <strong> Making positive impact with maps!  </strong> 
-            </p>
-            <p></p>
+    <main id="main">
+      <section class="hero" aria-labelledby="name">
+        <div class="hero-text">
+          <p class="role" data-i18n="role">GIS yazılım geliştirici · full-stack web GIS</p>
+          <h1 id="name" class="reg-name" data-t="Alper
+Emek">Alper<br>Emek</h1>
+          <dl class="facts" id="facts"></dl>
+          <div class="actions">
+            <a class="cartouche fill-contour" href="#projects" data-i18n="cta">Projelere git</a>
+            <a class="cartouche" href="mailto:recaialperemek@gmail.com">recaialperemek@gmail.com</a>
+          </div>
         </div>
-        <img src="img/alper_logo.png" class="about-me__img">
-    </section>
-    
-    <!-- my work   -->
-    <!-- <section class="my-work" id="work">
-        <h2 class="section__title section__title--work">My Work</h2>
-        <p class="section__subtitle section__subtitle--work"></p> -->
-        <!-- portfolio item  -->
-        <!-- <div class="portfolio">
-            <a href="#" class="portfolio__item">
-                <img src="img/IMG_1077.JPG" alt="" class="portfolio__img">
-            </a>
+
+        <div class="globe-box">
+          <div class="globe-head">
+            <span class="mono layer" data-i18n="globe.layer">places.geom</span>
+            <span class="mono coords" id="coords">30.0° E · 36.0° N</span>
+            <span class="hint" data-i18n="globe.hint">sürükle · bir yere dokun</span>
+          </div>
+          <div class="globe" id="globe" role="img" aria-label="Dönen dünya küresi" data-i18n-aria="globe.label"></div>
+          <div class="scale-line">
+            <span class="scale-bar" aria-hidden="true"><i id="scaleBar"></i><b>1000 km</b></span>
+            <span class="mono" id="scaleText">≈ 1 : 127 000 000</span>
+            <span class="mono projection"><span data-i18n="globe.proj">ortografik</span> · EPSG:4326</span>
+          </div>
+          <div class="places" id="places" role="group" aria-label="Yerler" data-i18n-aria="globe.placesLabel"></div>
+          <div class="console">
+            <div class="sql">
+              <div class="sql-head">
+                <span class="mono" data-i18n="console.prompt">psql · gis=#</span>
+                <span class="mono" id="status"></span>
+              </div>
+              <pre class="query"><code id="query"></code></pre>
+              <div class="history mono" id="history" aria-label="Son komutlar" data-i18n-aria="console.history"></div>
+            </div>
+            <div class="res">
+              <p class="res-title" id="resTitle" data-i18n="console.result">Sonuç</p>
+              <ul class="rows" id="rows" aria-live="polite"></ul>
+            </div>
+          </div>
         </div>
-    </section> -->
-    <!-- footer  -->
-   
-    <footer class="footer" id="social">
-        <a href="mailto:recaialperemek@gmail.com" class="footer__link">recaialperemek@gmail.com</a>
-        <ul class="social-list">
-            <li class="social-list__item">
-                <a class="social-list__link" href="https://www.linkedin.com/in/alper-emek-362520159/">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </li>
-            <li class="social-list__item">
-                <a class="social-list__link" href="https://github.com/cartwheei">
-                    <i class="fab fa-github"></i>
-                </a>
-            </li>
-            <li class="social-list__item">
-                <a class="social-list__link" href="https://twitter.com/AlperEmek">
-                    <i class="fab fa-twitter"></i>
-                </a>
-            </li>
-            <li class="social-list__item">
-                <a class="social-list__link" href="https://www.facebook.com/alper.emekk/">
-                    <i class="fab fa-facebook-square"></i>
-                </a>
-            </li>
-        </ul>
+      </section>
+
+      <section class="plate plate-veg" id="projects" aria-labelledby="h-projects">
+        <h2 id="h-projects" data-i18n="sec.projects">Projeler</h2>
+        <div class="body proj-list" id="projects-list"></div>
+      </section>
+
+      <section class="plate plate-hydro" id="now" aria-labelledby="h-now">
+        <h2 id="h-now" data-i18n="sec.now">Şu an</h2>
+        <div class="body">
+          <div class="focus" id="now-focus"></div>
+          <p class="now-intro" id="now-intro"></p>
+          <div class="now-grid" id="now-list"></div>
+        </div>
+      </section>
+
+      <section class="plate plate-contour" id="experience" aria-labelledby="h-experience">
+        <h2 id="h-experience" data-i18n="sec.experience">Deneyim</h2>
+        <div class="body table-wrap"><table class="exp" id="exp"></table></div>
+      </section>
+
+      <section class="plate plate-key" id="education" aria-labelledby="h-education">
+        <h2 id="h-education" data-i18n="sec.education">Eğitim, yayın ve ödül</h2>
+        <div class="body two">
+          <div class="col" id="edu"></div>
+          <div class="col" id="pub"></div>
+        </div>
+      </section>
+
+      <section class="plate plate-seal" id="contact" aria-labelledby="h-contact">
+        <h2 id="h-contact" data-i18n="sec.contact">İletişim</h2>
+        <div class="body">
+          <p class="contact-note" data-i18n="contactNote">Yeni bir harita, bir mekânsal veri problemi ya da birlikte yayın için yazın.</p>
+          <div class="stamps" id="contact-list"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="colophon">
+      <span>© 2026 Alper Emek</span>
+      <span class="mono">İstanbul · 41.01° N 28.98° E · EPSG:4326</span>
     </footer>
-<script src="js/index.js"></script>
+  </div>
 
+  <button type="button" class="cartouche to-top" id="toTop" aria-label="Başa dön" data-i18n-aria="toTop">
+    <svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true" focusable="false"><path d="M12 20V5M5.5 11.5 12 5l6.5 6.5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="square" stroke-linejoin="miter"/></svg>
+  </button>
+
+  <noscript>
+    <p class="noscript">Bu sayfa küre ve konsol için JavaScript kullanır. / This page uses JavaScript for the globe and the console. <a href="mailto:recaialperemek@gmail.com">recaialperemek@gmail.com</a></p>
+  </noscript>
+
+  <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js" defer></script>
+  <script src="https://cdn.jsdelivr.net/npm/topojson-client@3.1.0/dist/topojson-client.min.js" defer></script>
+  <script src="js/content.js?v=20260909r" defer></script>
+  <script src="js/globe.js?v=20260909r" defer></script>
+  <script src="js/index.js?v=20260909r" defer></script>
 </body>
- </html>
+</html>

@@ -1,0 +1,53 @@
+{
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-09T00:43:31.796Z",
+        "reason": "user chose the registered plate print world (printed map sheet on paper) on the decision page 2026-09-09; paper ground is the world's material"
+      },
+      {
+        "rule": "repeating-stripes-gradient",
+        "value": "*",
+        "files": [
+          "index.html"
+        ],
+        "createdAt": "2026-09-09T00:43:31.821Z",
+        "reason": "user chose the registered plate print world 2026-09-09; 45-degree hatch is the hydrography plate and fine horizontal lines the contour plate, functional plate textures of that world"
+      },
+      {
+        "rule": "cream-palette",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/challenger-ukiyoe-sketch.html"
+        ],
+        "createdAt": "2026-09-09T00:49:20.875Z",
+        "reason": "decision-round sketch of the registered plate print world the user chose 2026-09-09; paper ground is that world's material"
+      },
+      {
+        "rule": "all-caps-body",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/challenger-ukiyoe-sketch.html"
+        ],
+        "createdAt": "2026-09-09T01:02:50.318Z",
+        "reason": "decision-round sketch (gitignored, not shipped); the uppercase runs are short nav cartouche and map labels, not body passages"
+      },
+      {
+        "rule": "design-system-font",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/assigned-sketch.html"
+        ],
+        "createdAt": "2026-09-09T01:10:38.128Z",
+        "reason": "spent decision-round sketch of the unchosen hypsometric atlas direction (gitignored, not shipped); its Barlow / EB Garamond faces document that rejected alternative, not the system"
+      }
+    ]
+  }
+}
