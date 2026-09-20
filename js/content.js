@@ -75,13 +75,13 @@ window.CONTENT = {
         meta: '3B web · sensör verisi · 2024',
         bullets: [
           'Elasticsearch’teki sensör verilerini (sıcaklık, ışık, nem, CO₂, hareket) 3B bina modeli üzerinde, zaman ekseniyle görselleştiren web uygulaması',
-          'three.js ile sıfırdan modellenen 4 katlı, 49 odalı ofis binası; odalar veri setindeki “room” kimlikleriyle eşlendi',
-          'Tüm tematik gösterimler Elasticsearch API’si üzerinden; tarihe göre sorgu ve canlı mod, zaman çizelgesi, tematik lejant',
-          'TMMOB 8. Coğrafi Bilgi Sistemleri Kongresi’nde sözlü olarak sunuldu (Ankara, 2024)'
+          'three.js ile sıfırdan modellenen, odaları veri setindeki “room” kimlikleriyle eşleşen 4 katlı, 49 odalı ofis binası',
+          'Tarihe göre sorgu, canlı mod, zaman çizelgesi ve tematik lejant dahil bütün tematik gösterimler Elasticsearch API’si üzerinden çalışır',
+          'TMMOB 8. Coğrafi Bilgi Sistemleri Kongresi’nde (Ankara, 2024) sözlü olarak sunuldu'
         ],
         tags: ['three.js', 'Elasticsearch', 'WebGL'],
         link: 'hkmo', linkLabel: 'Gönderiyi gör',
-        alt: '4D web uygulaması: dört katlı ofis binasının 3B modeli, odalar CO₂ değerine göre yeşil tonlarda; solda tematik seçimi, altta zaman çizelgesi'
+        alt: '4D web uygulaması: dört katlı ofis binasının 3B modeli, CO₂ değerine göre yeşil tonlarda boyanmış odalar, solda tematik seçimi, altta zaman çizelgesi'
       },
       {
         id: 'sar', img: 'sar',
@@ -95,7 +95,7 @@ window.CONTENT = {
         ],
         tags: ['Python', 'Keras', 'rasterio', 'GeoPandas'],
         link: 'isprs', linkLabel: 'Makaleyi aç',
-        alt: 'Rotterdam üzerinde SAR görüntüsü; tespit edilen bina ayak izleri kırmızı çizgilerle işaretli'
+        alt: 'Rotterdam üzerinde SAR görüntüsü, tespit edilen bina ayak izleri kırmızı çizgilerle işaretli'
       },
       {
         id: 'rochester', img: 'rochester',
@@ -109,7 +109,7 @@ window.CONTENT = {
         tags: ['SuperMap iClient', 'Leaflet', 'WebGIS', 'Mekânsal SQL'],
         links: [{ link: 'supermap', label: 'Duyuruyu gör' }, { link: 'giscontest', label: 'Yarışma sonuçları' }],
         press: [['Hürriyet', 'pressHurriyet'], ['Akdeniz Üniversitesi', 'pressAkdeniz']],
-        alt: 'Rochester şehir haritası; satılık emlak noktaları kırmızı, sağda adres eşleme paneli'
+        alt: 'Rochester şehir haritası, satılık emlak noktaları kırmızı, sağda adres eşleme paneli'
       },
       {
         id: 'thesis', img: 'thesis',
@@ -122,19 +122,19 @@ window.CONTENT = {
         ],
         tags: ['Python', 'K-Means', 'Masaüstü GIS'],
         link: 'thesis', linkLabel: 'Bildiriyi aç',
-        alt: 'Bitirme çalışması arayüzü; ortada Harita Mühendisliği Bölümü amblemi'
+        alt: 'Bitirme çalışması arayüzü, ortada Harita Mühendisliği Bölümü amblemi'
       }
     ],
     now: {
-      intro: 'Kurumsal CBS platformu üzerinde özel çözümler geliştiren ekibi yönetiyorum; 300’ü aşkın projenin başarısı ekibimin sorumluluğunda.',
+      intro: 'Kurumsal CBS platformu üzerinde özel çözümler geliştiren ekibi yönetiyorum. 300’ü aşkın projenin başarısı ekibimin sorumluluğunda.',
       focus: {
         title: 'Agentic geospatial intelligence',
-        text: 'Şu anda odaklandığım konu: yapay zeka ajanlarının mekânsal veri, harita servisleri ve kurumsal CBS iş akışlarıyla iş yapması ve ajantik yapay zeka.'
+        text: 'Şu anda yapay zeka ajanlarının mekânsal veri, harita servisleri ve kurumsal CBS iş akışlarıyla iş yapmasına, yani ajantik yapay zekaya odaklanıyorum.'
       },
       items: [
-        { title: 'Mekânsal sorunlar, custom çözümler', text: 'Kurumların mekânsal veri problemlerine platform üzerinde özel çözümler; onlarca kurumda canlı.' },
-        { title: 'Web GIS ürünleri', text: 'İnteraktif harita, dashboard, REST API ve mekânsal veri tabanı; tasarımdan teslime.' },
-        { title: 'İzleme ve entegrasyon', text: 'Merkezi izleme ve bildirimler; belge yönetimi, ERP ve CRM entegrasyonları.' }
+        { title: 'Mekânsal sorunlar, custom çözümler', text: 'Kurumların mekânsal veri problemlerine platform üzerinde geliştirdiğimiz özel çözümler onlarca kurumda canlı çalışıyor.' },
+        { title: 'Web GIS ürünleri', text: 'İnteraktif harita, dashboard, REST API ve mekânsal veri tabanını tasarımdan teslime kadar geliştiriyoruz.' },
+        { title: 'İzleme ve entegrasyon', text: 'Merkezi izleme ve bildirimlerin yanı sıra belge yönetimi, ERP ve CRM entegrasyonları kuruyoruz.' }
       ]
     },
     th: { period: 'Dönem', org: 'Kurum', role: 'Rol', place: 'Yer' },
@@ -151,8 +151,8 @@ window.CONTENT = {
     ],
     pubHead: 'Yayın ve ödül',
     pub: [
-      { years: '2024', title: '4D Web Uygulaması ile Sensör Verilerinin Görüntülenmesi', text: 'Sensör verilerinin mekânsal ve zamansal görselleştirilmesi. TMMOB HKMO 8. CBS Kongresi’nde sözlü bildiri, Ankara.', link: 'hkmo', linkLabel: 'Gönderiyi gör' },
-      { years: '2020', title: 'SAR görüntülerinde U-Net ile bina tespiti', text: 'CNN tabanlı U-Net; sınıflandırma maskesi için ön işleme adımları. International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences, XLIV-4/W3-2020.', link: 'isprs', linkLabel: 'Makaleyi aç' },
+      { years: '2024', title: '4D Web Uygulaması ile Sensör Verilerinin Görüntülenmesi', text: 'Sensör verilerinin mekânsal ve zamansal görselleştirilmesi. TMMOB HKMO 8. CBS Kongresi’nde (Ankara) sözlü bildiri olarak sunuldu.', link: 'hkmo', linkLabel: 'Gönderiyi gör' },
+      { years: '2020', title: 'SAR görüntülerinde U-Net ile bina tespiti', text: 'CNN tabanlı U-Net ve sınıflandırma maskesi için ön işleme adımları. International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences, XLIV-4/W3-2020.', link: 'isprs', linkLabel: 'Makaleyi aç' },
       { years: '2020', title: 'SuperMap GIS Contest 2020 — geliştirici dalında birincilik', text: 'Emlak verisi üzerinde mekânsal analiz, harita servisi ve arayüz.', link: 'giscontest', linkLabel: 'Yarışma sonuçları', press: [['Hürriyet', 'pressHurriyet'], ['Akdeniz Üniversitesi', 'pressAkdeniz']] }
     ],
     contact: [
@@ -231,13 +231,13 @@ window.CONTENT = {
         meta: '3D web · sensor data · 2024',
         bullets: [
           'Web application that visualises Elasticsearch sensor data (temperature, light, humidity, CO₂, motion) on a 3D building model along a time axis',
-          'A 4-storey, 49-room office building modelled from scratch in three.js; rooms matched to the dataset through their “room” IDs',
-          'Every thematic view runs through the Elasticsearch API; query by date or live mode, timeline slider, thematic legend',
+          'A 4-storey, 49-room office building modelled from scratch in three.js, with rooms matched to the dataset through their “room” IDs',
+          'Every thematic view runs through the Elasticsearch API, with query by date or live mode, a timeline slider and a thematic legend',
           'Presented orally at the TMMOB 8th Geographic Information Systems Congress (Ankara, 2024)'
         ],
         tags: ['three.js', 'Elasticsearch', 'WebGL'],
         link: 'hkmo', linkLabel: 'See the post',
-        alt: '4D web application: 3D model of a four-storey office building, rooms shaded green by CO₂ level; thematic selector on the left, timeline at the bottom'
+        alt: '4D web application: 3D model of a four-storey office building, rooms shaded green by CO₂ level, thematic selector on the left, timeline at the bottom'
       },
       {
         id: 'sar', img: 'sar',
@@ -282,15 +282,15 @@ window.CONTENT = {
       }
     ],
     now: {
-      intro: 'I lead the team building custom solutions on an enterprise GIS platform; the success of more than 300 projects is my team’s responsibility.',
+      intro: 'I lead the team building custom solutions on an enterprise GIS platform. The success of more than 300 projects is my team’s responsibility.',
       focus: {
         title: 'Agentic geospatial intelligence',
-        text: 'My current focus: AI agents doing real work with spatial data, map services and enterprise GIS workflows, and agentic AI.'
+        text: 'Right now I focus on agentic AI — agents that do real work with spatial data, map services and enterprise GIS workflows.'
       },
       items: [
-        { title: 'Spatial problems, custom solutions', text: 'Custom solutions on the platform for institutions’ spatial data problems; live in dozens of institutions.' },
-        { title: 'Web GIS products', text: 'Interactive maps, dashboards, REST APIs and spatial databases, from design to delivery.' },
-        { title: 'Monitoring and integration', text: 'Central monitoring and notifications; document management, ERP and CRM integrations.' }
+        { title: 'Spatial problems, custom solutions', text: 'The custom solutions we build on the platform for institutions’ spatial data problems run live in dozens of institutions.' },
+        { title: 'Web GIS products', text: 'We build interactive maps, dashboards, REST APIs and spatial databases, from design to delivery.' },
+        { title: 'Monitoring and integration', text: 'Alongside central monitoring and notifications, we set up document management, ERP and CRM integrations.' }
       ]
     },
     th: { period: 'Period', org: 'Organisation', role: 'Role', place: 'Place' },
@@ -307,8 +307,8 @@ window.CONTENT = {
     ],
     pubHead: 'Papers and award',
     pub: [
-      { years: '2024', title: '4D Web Application for Visualizing Sensor Data', text: 'Spatial and temporal visualisation of sensor data. Oral paper at the 8th GIS Congress of TMMOB HKMO, Ankara.', link: 'hkmo', linkLabel: 'See the post' },
-      { years: '2020', title: 'Building detection on SAR imagery with U-Net', text: 'CNN-based U-Net; pre-processing pipeline for the classification mask. International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences, XLIV-4/W3-2020.', link: 'isprs', linkLabel: 'Read the paper' },
+      { years: '2024', title: '4D Web Application for Visualizing Sensor Data', text: 'Spatial and temporal visualisation of sensor data. Presented as an oral paper at the 8th GIS Congress of TMMOB HKMO in Ankara.', link: 'hkmo', linkLabel: 'See the post' },
+      { years: '2020', title: 'Building detection on SAR imagery with U-Net', text: 'CNN-based U-Net with a pre-processing pipeline for the classification mask. International Archives of the Photogrammetry, Remote Sensing and Spatial Information Sciences, XLIV-4/W3-2020.', link: 'isprs', linkLabel: 'Read the paper' },
       { years: '2020', title: 'SuperMap GIS Contest 2020 — first prize, developer category', text: 'Spatial analysis on real-estate data, a map service and a front-end.', link: 'giscontest', linkLabel: 'Contest results', press: [['Hürriyet', 'pressHurriyet'], ['Akdeniz University', 'pressAkdeniz']] }
     ],
     contact: [
